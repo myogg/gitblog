@@ -17,8 +17,8 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 
 ## 最近更新
 - [[ 画稿 ]花](https://github.com/myogg/Gitblog/issues/10)--2025-01-19
-- [存档、记录 大辣椒](https://github.com/myogg/Gitblog/issues/9)--2025-01-19
-- [我并没有意识到这么平凡的生活是那么的重要和可贵](https://github.com/myogg/Gitblog/issues/8)--2025-01-19
+- [[ 画稿 ] 存档、记录 大辣椒](https://github.com/myogg/Gitblog/issues/9)--2025-01-19
+- [[ 画稿 ] 我并没有意识到这么平凡的生活是那么的重要和可贵](https://github.com/myogg/Gitblog/issues/8)--2025-01-19
 - [一块老砖](https://github.com/myogg/Gitblog/issues/7)--2025-01-19
 - [即使世界偶尔凉薄，内心也要繁花似锦](https://github.com/myogg/Gitblog/issues/6)--2025-01-19
 ## 一些记录
@@ -28,8 +28,8 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
 - [[ 画稿 ]花](https://github.com/myogg/Gitblog/issues/10)--2025-01-19
-- [存档、记录 大辣椒](https://github.com/myogg/Gitblog/issues/9)--2025-01-19
-- [我并没有意识到这么平凡的生活是那么的重要和可贵](https://github.com/myogg/Gitblog/issues/8)--2025-01-19
+- [[ 画稿 ] 存档、记录 大辣椒](https://github.com/myogg/Gitblog/issues/9)--2025-01-19
+- [[ 画稿 ] 我并没有意识到这么平凡的生活是那么的重要和可贵](https://github.com/myogg/Gitblog/issues/8)--2025-01-19
 - [一块老砖](https://github.com/myogg/Gitblog/issues/7)--2025-01-19
 - [即使世界偶尔凉薄，内心也要繁花似锦](https://github.com/myogg/Gitblog/issues/6)--2025-01-19
 <details><summary>显示更多</summary>
