@@ -16,7 +16,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 [RSS Feed](https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml)
 
 ## 最近更新
-- [[ 软件 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
+- [[ 吐槽 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
 - [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
 - [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
@@ -26,12 +26,10 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
 - [错误的数学](https://github.com/myogg/Gitblog/issues/4)--2025-01-19
 - [照明的历史](https://github.com/myogg/Gitblog/issues/3)--2025-01-19
-## 收录
-- [[ 软件 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
 ## notes
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
-- [[ 软件 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
+- [[ 吐槽 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
 - [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 - [[ 图片 ] 养了两只猫](https://github.com/myogg/Gitblog/issues/18)--2025-01-19
 - [[ 图片 ] 世界上最早的高速公路](https://github.com/myogg/Gitblog/issues/17)--2025-01-19
