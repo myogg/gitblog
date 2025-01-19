@@ -15,12 +15,30 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 
 [RSS Feed](https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml)
 
+## [友情链接](https://github.com/myogg/gitblog/issues/26)
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Link</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ## 最近更新
+- [Friends](https://github.com/myogg/Gitblog/issues/26)--2025-01-19
 - [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
 - [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 - [[ 吐槽 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
-- [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 ## 一些记录
 - [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
