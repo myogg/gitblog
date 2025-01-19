@@ -16,27 +16,33 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 [RSS Feed](https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml)
 
 ## 最近更新
+- [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
 - [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 - [[ 吐槽 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
 - [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
-- [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
 ## 一些记录
+- [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
 - [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
 - [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
 - [错误的数学](https://github.com/myogg/Gitblog/issues/4)--2025-01-19
+<details><summary>显示更多</summary>
+
 - [照明的历史](https://github.com/myogg/Gitblog/issues/3)--2025-01-19
+</details>
+
 ## notes
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
+- [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
 - [[ 吐槽 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
 - [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 - [[ 图片 ] 养了两只猫](https://github.com/myogg/Gitblog/issues/18)--2025-01-19
 - [[ 图片 ] 世界上最早的高速公路](https://github.com/myogg/Gitblog/issues/17)--2025-01-19
-- [[ 图片 ] 宁武悬空古栈道](https://github.com/myogg/Gitblog/issues/16)--2025-01-19
 <details><summary>显示更多</summary>
 
+- [[ 图片 ] 宁武悬空古栈道](https://github.com/myogg/Gitblog/issues/16)--2025-01-19
 - [[ 图片 ] 峨眉山](https://github.com/myogg/Gitblog/issues/15)--2025-01-19
 - [[ 画稿 ] 金鱼](https://github.com/myogg/Gitblog/issues/14)--2025-01-19
 - [[ 画稿 ] 被咬了一口的苹果](https://github.com/myogg/Gitblog/issues/13)--2025-01-19
