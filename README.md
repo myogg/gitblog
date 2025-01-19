@@ -19,7 +19,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [[ 图片 ] 养了两只猫](https://github.com/myogg/Gitblog/issues/18)--2025-01-19
 - [[ 图片 ] 世界上最早的高速公路](https://github.com/myogg/Gitblog/issues/17)--2025-01-19
 - [[ 图片 ] 宁武悬空古栈道](https://github.com/myogg/Gitblog/issues/16)--2025-01-19
-- [[ 图片] 峨眉山](https://github.com/myogg/Gitblog/issues/15)--2025-01-19
+- [[ 图片 ] 峨眉山](https://github.com/myogg/Gitblog/issues/15)--2025-01-19
 - [[ 画稿 ] 金鱼](https://github.com/myogg/Gitblog/issues/14)--2025-01-19
 ## 一些记录
 - [错误的数学](https://github.com/myogg/Gitblog/issues/4)--2025-01-19
@@ -30,7 +30,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [[ 图片 ] 养了两只猫](https://github.com/myogg/Gitblog/issues/18)--2025-01-19
 - [[ 图片 ] 世界上最早的高速公路](https://github.com/myogg/Gitblog/issues/17)--2025-01-19
 - [[ 图片 ] 宁武悬空古栈道](https://github.com/myogg/Gitblog/issues/16)--2025-01-19
-- [[ 图片] 峨眉山](https://github.com/myogg/Gitblog/issues/15)--2025-01-19
+- [[ 图片 ] 峨眉山](https://github.com/myogg/Gitblog/issues/15)--2025-01-19
 - [[ 画稿 ] 金鱼](https://github.com/myogg/Gitblog/issues/14)--2025-01-19
 <details><summary>显示更多</summary>
 
