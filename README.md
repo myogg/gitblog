@@ -26,9 +26,9 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>做个有意思的人</td>
+<td>https://829259.xyz</td>
+<td>做个有意思的人</td>
 </tr>
 </tbody>
 </table>
