@@ -34,7 +34,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [[ 画稿 ] 即使世界偶尔凉薄，内心也要繁花似锦](https://github.com/myogg/Gitblog/issues/6)--2025-01-19
 <details><summary>显示更多</summary>
 
-- [山水秦岭 水墨终南](https://github.com/myogg/Gitblog/issues/5)--2025-01-19
+- [[ 图片 ]山水秦岭 水墨终南](https://github.com/myogg/Gitblog/issues/5)--2025-01-19
 - [孟子｜懂人话做人事](https://github.com/myogg/Gitblog/issues/2)--2025-01-19
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 </details>
