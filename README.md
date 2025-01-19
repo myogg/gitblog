@@ -16,12 +16,13 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 [RSS Feed](https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml)
 
 ## 最近更新
+- [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 - [[ 吐槽 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
 - [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
 - [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
-- [[ 图片 ] 养了两只猫](https://github.com/myogg/Gitblog/issues/18)--2025-01-19
 ## 一些记录
+- [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
 - [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
 - [错误的数学](https://github.com/myogg/Gitblog/issues/4)--2025-01-19
