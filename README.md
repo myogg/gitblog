@@ -16,17 +16,18 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 [RSS Feed](https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml)
 
 ## 最近更新
+- [一块老砖](https://github.com/myogg/Gitblog/issues/7)--2025-01-19
 - [即使世界偶尔凉薄，内心也要繁花似锦](https://github.com/myogg/Gitblog/issues/6)--2025-01-19
 - [山水秦岭 水墨终南](https://github.com/myogg/Gitblog/issues/5)--2025-01-19
 - [错误的数学](https://github.com/myogg/Gitblog/issues/4)--2025-01-19
 - [照明的历史](https://github.com/myogg/Gitblog/issues/3)--2025-01-19
-- [孟子｜懂人话做人事](https://github.com/myogg/Gitblog/issues/2)--2025-01-19
 ## 一些记录
 - [错误的数学](https://github.com/myogg/Gitblog/issues/4)--2025-01-19
 - [照明的历史](https://github.com/myogg/Gitblog/issues/3)--2025-01-19
 ## notes
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
+- [一块老砖](https://github.com/myogg/Gitblog/issues/7)--2025-01-19
 - [即使世界偶尔凉薄，内心也要繁花似锦](https://github.com/myogg/Gitblog/issues/6)--2025-01-19
 - [山水秦岭 水墨终南](https://github.com/myogg/Gitblog/issues/5)--2025-01-19
 - [孟子｜懂人话做人事](https://github.com/myogg/Gitblog/issues/2)--2025-01-19

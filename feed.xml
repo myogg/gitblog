@@ -1,8 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/myogg/Gitblog</id><title>RSS feed of myogg's Gitblog</title><updated>2025-01-19T08:53:47.645784+00:00</updated><link href="https://github.com/myogg/Gitblog"/><link href="https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/myogg/Gitblog/issues/6</id><title>即使世界偶尔凉薄，内心也要繁花似锦</title><updated>2025-01-19T08:53:47.808969+00:00</updated><content type="html"><![CDATA[<p>一月已经过半，愿都安好</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/myogg/Gitblog</id><title>RSS feed of myogg's Gitblog</title><updated>2025-01-19T08:57:33.406765+00:00</updated><link href="https://github.com/myogg/Gitblog"/><link href="https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/myogg/Gitblog/issues/7</id><title>一块老砖</title><updated>2025-01-19T08:57:33.615757+00:00</updated><content type="html"><![CDATA[<p><img src="https://github.com/user-attachments/assets/04820b5a-fe27-494f-9c00-2ee3d227778f" alt="Image" /></p>
+<p>备份收藏而已</p>
+]]></content><link href="https://github.com/myogg/Gitblog/issues/7"/><category term="Myblog"/><published>2025-01-19T08:57:06+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/6</id><title>即使世界偶尔凉薄，内心也要繁花似锦</title><updated>2025-01-19T08:57:33.712980+00:00</updated><content type="html"><![CDATA[<p>一月已经过半，愿都安好</p>
 <p><img src="https://pic.superbed.cc/item/678cbd4cfa9f77b4dc6f7b80.jpg" alt="" /></p>
 <p><img src="https://pic.superbed.cc/item/678cbd6ffa9f77b4dc6f7ce2.jpg" alt="" /></p>
-]]></content><link href="https://github.com/myogg/Gitblog/issues/6"/><category term="Myblog"/><published>2025-01-19T08:53:21+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/5</id><title>山水秦岭 水墨终南</title><updated>2025-01-19T08:53:47.890906+00:00</updated><content type="html"><![CDATA[<h3>山水秦岭，水墨终南</h3>
+]]></content><link href="https://github.com/myogg/Gitblog/issues/6"/><category term="Myblog"/><published>2025-01-19T08:53:21+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/5</id><title>山水秦岭 水墨终南</title><updated>2025-01-19T08:57:33.813637+00:00</updated><content type="html"><![CDATA[<h3>山水秦岭，水墨终南</h3>
 <p><img src="https://img.imgdb.cn/item/603cdf4f5f4313ce256928a9.jpg" alt="" /></p>
 <p>早春二月一场春雪覆盖了终南山麓，云海笼罩着若隐若现的南五台仿佛仙境一般！</p>
 <p><img src="https://img.imgdb.cn/item/603cdf4f5f4313ce256928af.jpg" alt="" /></p>
@@ -12,14 +14,14 @@
 <p><img src="https://img.imgdb.cn/item/603cdfa35f4313ce2569577a.jpg" alt="" /></p>
 <p><img src="https://img.imgdb.cn/item/603cdfa35f4313ce2569577d.jpg" alt="" /></p>
 <p><img src="https://img.imgdb.cn/item/603cdfa35f4313ce25695782.jpg" alt="" /></p>
-]]></content><link href="https://github.com/myogg/Gitblog/issues/5"/><category term="Myblog"/><published>2025-01-19T08:50:48+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/4</id><title>错误的数学</title><updated>2025-01-19T08:53:48.013112+00:00</updated><content type="html"><![CDATA[<p>一家设计公司在社交媒体上，发布了下面的图片.</p>
+]]></content><link href="https://github.com/myogg/Gitblog/issues/5"/><category term="Myblog"/><published>2025-01-19T08:50:48+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/4</id><title>错误的数学</title><updated>2025-01-19T08:57:33.918248+00:00</updated><content type="html"><![CDATA[<p>一家设计公司在社交媒体上，发布了下面的图片.</p>
 <p><img src="https://pic.superbed.cc/item/678cb816fa9f77b4dc6f3a3c.webp" alt="" /></p>
 <p>图片声称，33000英尺（1万米）高空的飞机，比5000英尺（1500米）的飞机，在飞向同样目的地时，花费的时间是后者的4倍（假定飞行速度相同）。</p>
 <p>一位网友第一反应是，这是在开笑话吗？它为什么忽略地球半径。</p>
 <p>地球半径（设为 R）大约是1800万英尺，这意味着外圈长度只比内圈，多了不到1%。</p>
 <p><img src="https://pic.superbed.cc/item/678cb85bfa9f77b4dc6f3cb2.webp" alt="" /></p>
 <p>而且，由于33000英尺高空的空气阻力减小，该高度的飞行时间实际上可能更少。</p>
-]]></content><link href="https://github.com/myogg/Gitblog/issues/4"/><category term="一些记录"/><published>2025-01-19T08:32:10+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/3</id><title>照明的历史</title><updated>2025-01-19T08:53:48.100239+00:00</updated><content type="html"><![CDATA[<p>工业革命之前，世界是漆黑的，灯光极其昂贵，火是唯一的人造光源。</p>
+]]></content><link href="https://github.com/myogg/Gitblog/issues/4"/><category term="一些记录"/><published>2025-01-19T08:32:10+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/3</id><title>照明的历史</title><updated>2025-01-19T08:57:34.017511+00:00</updated><content type="html"><![CDATA[<p>工业革命之前，世界是漆黑的，灯光极其昂贵，火是唯一的人造光源。</p>
 <p>历史上，人造光一直是富人和有权势的人的特权，生产和维护既费力又肮脏，可用性和质量都很差。穷人很难获得人造光，总是生活在黑暗中。</p>
 <p>古代房屋在夜晚有蜡烛照明，是巨大财富的标志。当时，蜂蜡制成的优质蜡烛是最好的光源，但天然蜂蜡的供应有限，加上手工制作的繁琐，除了最富有的人之外，其他人都买不到优质蜡烛。</p>
 <p>一位作家写道：“打开你的冰箱门，你召唤出的光线比18世纪大多数家庭所享受的光线总量还要多。”</p>
@@ -31,7 +33,7 @@
 <p>正是因为煤油，夜间第一次变得明亮了，天黑后也能生产和娱乐。</p>
 <p>19世纪后半期，托马斯·爱迪生（Thomas Edison）发明了电灯，电照明的时代从此来临。</p>
 <p><img src="https://pic.superbed.cc/item/678cb74ffa9f77b4dc6f329a.jpg" alt="" /></p>
-]]></content><link href="https://github.com/myogg/Gitblog/issues/3"/><category term="一些记录"/><published>2025-01-19T08:27:39+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/2</id><title>孟子｜懂人话做人事</title><updated>2025-01-19T08:53:48.190654+00:00</updated><content type="html"><![CDATA[<p>这世界最能听懂的话就是真话。</p>
+]]></content><link href="https://github.com/myogg/Gitblog/issues/3"/><category term="一些记录"/><published>2025-01-19T08:27:39+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/2</id><title>孟子｜懂人话做人事</title><updated>2025-01-19T08:57:34.108584+00:00</updated><content type="html"><![CDATA[<p>这世界最能听懂的话就是真话。</p>
 <p>所谓真话，就是实话实说，上升到哲学高度就是实事求是。因为真话说的就是实事，通过实事能求出“是”来。是，就是规律，就能让我们通过实事了解事情发展的基本走向。</p>
 <p>这个道理很简单，但一到现实中就复杂了。</p>
 <p>因为每个生活在现实中的人或组织，都有自己的利益，为了达到自己的利益，就会有人或组织不愿意说实话。</p>
@@ -56,5 +58,5 @@
 <p>孟子离我们两千多年了，可现在对比一下他说的话，似乎能做到的也没几个。</p>
 <p>从这意义上说，孟子的思想还是有现实指导意义的：听懂人话，做个好人。</p>
 <p><img src="https://pic.superbed.cc/item/678c7482fa9f77b4dc6be17f.jpg" alt="" /></p>
-]]></content><link href="https://github.com/myogg/Gitblog/issues/2"/><category term="Myblog"/><published>2025-01-19T03:43:23+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/1</id><title>2025</title><updated>2025-01-19T08:53:48.270986+00:00</updated><content type="html"><![CDATA[<p>新年快乐，心想事成。</p>
+]]></content><link href="https://github.com/myogg/Gitblog/issues/2"/><category term="Myblog"/><published>2025-01-19T03:43:23+00:00</published></entry><entry><id>https://github.com/myogg/Gitblog/issues/1</id><title>2025</title><updated>2025-01-19T08:57:34.203551+00:00</updated><content type="html"><![CDATA[<p>新年快乐，心想事成。</p>
 ]]></content><link href="https://github.com/myogg/Gitblog/issues/1"/><category term="notes"/><category term="Myblog"/><published>2025-01-19T02:44:37+00:00</published></entry></feed>
