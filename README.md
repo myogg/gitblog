@@ -16,8 +16,10 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 [RSS Feed](https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml)
 
 ## 最近更新
+- [孟子｜懂人话做人事](https://github.com/myogg/Gitblog/issues/2)--2025-01-19
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## notes
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
+- [孟子｜懂人话做人事](https://github.com/myogg/Gitblog/issues/2)--2025-01-19
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
