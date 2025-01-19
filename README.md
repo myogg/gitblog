@@ -16,7 +16,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 [RSS Feed](https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml)
 
 ## 最近更新
-- [花](https://github.com/myogg/Gitblog/issues/10)--2025-01-19
+- [[ 画稿 ]花](https://github.com/myogg/Gitblog/issues/10)--2025-01-19
 - [存档、记录 大辣椒](https://github.com/myogg/Gitblog/issues/9)--2025-01-19
 - [我并没有意识到这么平凡的生活是那么的重要和可贵](https://github.com/myogg/Gitblog/issues/8)--2025-01-19
 - [一块老砖](https://github.com/myogg/Gitblog/issues/7)--2025-01-19
@@ -27,7 +27,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 ## notes
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
-- [花](https://github.com/myogg/Gitblog/issues/10)--2025-01-19
+- [[ 画稿 ]花](https://github.com/myogg/Gitblog/issues/10)--2025-01-19
 - [存档、记录 大辣椒](https://github.com/myogg/Gitblog/issues/9)--2025-01-19
 - [我并没有意识到这么平凡的生活是那么的重要和可贵](https://github.com/myogg/Gitblog/issues/8)--2025-01-19
 - [一块老砖](https://github.com/myogg/Gitblog/issues/7)--2025-01-19
