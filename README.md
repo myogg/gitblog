@@ -16,11 +16,11 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 [RSS Feed](https://raw.githubusercontent.com/myogg/Gitblog/master/feed.xml)
 
 ## 最近更新
+- [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
 - [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
 - [[ 图片 ] 养了两只猫](https://github.com/myogg/Gitblog/issues/18)--2025-01-19
 - [[ 图片 ] 世界上最早的高速公路](https://github.com/myogg/Gitblog/issues/17)--2025-01-19
-- [[ 图片 ] 宁武悬空古栈道](https://github.com/myogg/Gitblog/issues/16)--2025-01-19
 ## 一些记录
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
 - [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
@@ -29,13 +29,14 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 ## notes
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
+- [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 - [[ 图片 ] 养了两只猫](https://github.com/myogg/Gitblog/issues/18)--2025-01-19
 - [[ 图片 ] 世界上最早的高速公路](https://github.com/myogg/Gitblog/issues/17)--2025-01-19
 - [[ 图片 ] 宁武悬空古栈道](https://github.com/myogg/Gitblog/issues/16)--2025-01-19
 - [[ 图片 ] 峨眉山](https://github.com/myogg/Gitblog/issues/15)--2025-01-19
-- [[ 画稿 ] 金鱼](https://github.com/myogg/Gitblog/issues/14)--2025-01-19
 <details><summary>显示更多</summary>
 
+- [[ 画稿 ] 金鱼](https://github.com/myogg/Gitblog/issues/14)--2025-01-19
 - [[ 画稿 ] 被咬了一口的苹果](https://github.com/myogg/Gitblog/issues/13)--2025-01-19
 - [[ 图片 ] 关山草原，也称“关山牧场”](https://github.com/myogg/Gitblog/issues/12)--2025-01-19
 - [[ 图片 ] 老友画了一幅人像，却貌似某人，特此备份吧。](https://github.com/myogg/Gitblog/issues/11)--2025-01-19
