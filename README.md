@@ -34,19 +34,20 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
+- [测试](https://github.com/myogg/Gitblog/issues/34)--2025-01-20
 - [伊拉克国家域名删除始末](https://github.com/myogg/Gitblog/issues/33)--2025-01-20
 - [Vercel 收购代码搜索工具 - Grep](https://github.com/myogg/Gitblog/issues/32)--2025-01-20
 - [[ 胡思乱想 ] Akamai CDN 退出中国](https://github.com/myogg/Gitblog/issues/31)--2025-01-20
 - [[ 生活 ] 今秋南方行](https://github.com/myogg/Gitblog/issues/30)--2025-01-20
-- [Apple Intelligence 有哪些体验](https://github.com/myogg/Gitblog/issues/29)--2025-01-19
 ## 一些记录
+- [测试](https://github.com/myogg/Gitblog/issues/34)--2025-01-20
 - [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
 - [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
-- [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
 <details><summary>显示更多</summary>
 
+- [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
 - [错误的数学](https://github.com/myogg/Gitblog/issues/4)--2025-01-19
 - [照明的历史](https://github.com/myogg/Gitblog/issues/3)--2025-01-19
 </details>
