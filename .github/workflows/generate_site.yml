@@ -50,10 +50,7 @@ jobs:
           gh release download $ZOLA_VERSION --repo getzola/zola -p '*linux*' --output zola.tar.gz
           tar zxf zola.tar.gz && sudo mv zola /usr/local/bin
 
-      - name: Build static site with Zola
-        run: |
-          cp config.toml output/config.toml
-          cd output && zola build --base-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+    
 
       - name: Deploy to GitHub Pages
         id: deployment
