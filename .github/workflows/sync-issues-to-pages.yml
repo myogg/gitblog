@@ -33,11 +33,22 @@ jobs:
     - name: Get Issues Data
       id: issues
       run: |
-        # 使用 GitHub CLI 获取 Issues 数据，需要预先安装 gh
-        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
-        ISSUES=$(gh api /repos/${{ github.repository }}/issues --jq '.[].{title,number,body}')
-        echo "::set-output name=issues::$ISSUES"
-      shell: bash
+          gh release download $ISITE_VERSION --repo kemingy/isite -p '*Linux_x86_64*' --output isite.tar.gz
+          tar zxf isite.tar.gz && mv isite /usr/local/bin
+          isite generate --user $USER --repo $REPO
+          gh release download $ZOLA_VERSION --repo getzola/zola -p '*linux*' --output zola.tar.gz
+          tar zxf zola.tar.gz && mv zola /usr/local/bin
+          cp config.toml output/config.toml
+          cd output && zola build --base-url $BASE_URL
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'output/public'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3
 
     - name: Generate Static Site
       run: |
