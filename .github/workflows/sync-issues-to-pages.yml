@@ -1,0 +1,50 @@
+name: Sync Issues to GitHub Pages
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天午夜运行一次
+  workflow_dispatch:    # 手动触发
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Get Issues Data
+      id: issues
+      run: |
+        # 使用 GitHub CLI 获取 Issues 数据，需要预先安装 gh
+        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+        ISSUES=$(gh api /repos/${{ github.repository }}/issues --jq '.[].{title,number,body}')
+        echo "::set-output name=issues::$ISSUES"
+      shell: bash
+
+    - name: Generate Static Site
+      run: |
+        # 创建一个简单的 HTML 文件来展示 Issues
+        echo "<!DOCTYPE html><html><head><title>Issues</title></head><body>" > index.html
+        echo "<h1>GitHub Issues</h1>" >> index.html
+        echo "<ul>" >> index.html
+        for issue in $(echo ${{ steps.issues.outputs.issues }}); do
+          TITLE=$(echo $issue | jq -r '.title')
+          NUMBER=$(echo $issue | jq -r '.number')
+          BODY=$(echo $issue | jq -r '.body' | sed 's/</&lt;/g; s/>/&gt;/g')  # 简单转义 HTML 标签
+          echo "<li><a href='https://github.com/${{ github.repository }}/issues/$NUMBER'>#$NUMBER $TITLE</a><br>$BODY</li>" >> index.html
+        done
+        echo "</ul>" >> index.html
+        echo "</body></html>" >> index.html
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+        publish_branch: gh-pages
