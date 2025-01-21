@@ -34,11 +34,11 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
+- [1](https://github.com/myogg/Gitblog/issues/41)--2025-01-21
 - [erher](https://github.com/myogg/Gitblog/issues/40)--2025-01-21
 - [伊拉克国家域名删除始末](https://github.com/myogg/Gitblog/issues/33)--2025-01-20
 - [Vercel 收购代码搜索工具 - Grep](https://github.com/myogg/Gitblog/issues/32)--2025-01-20
 - [[ 胡思乱想 ] Akamai CDN 退出中国](https://github.com/myogg/Gitblog/issues/31)--2025-01-20
-- [[ 生活 ] 今秋南方行](https://github.com/myogg/Gitblog/issues/30)--2025-01-20
 ## 一些记录
 - [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
@@ -60,13 +60,14 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [Vercel 收购代码搜索工具 - Grep](https://github.com/myogg/Gitblog/issues/32)--2025-01-20
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
+- [1](https://github.com/myogg/Gitblog/issues/41)--2025-01-21
 - [[ 胡思乱想 ] Akamai CDN 退出中国](https://github.com/myogg/Gitblog/issues/31)--2025-01-20
 - [[ 生活 ] 今秋南方行](https://github.com/myogg/Gitblog/issues/30)--2025-01-20
 - [[  图片 ]  随记](https://github.com/myogg/Gitblog/issues/27)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
-- [[ 吐槽 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
 <details><summary>显示更多</summary>
 
+- [[ 吐槽 ] claude 3.5](https://github.com/myogg/Gitblog/issues/22)--2025-01-19
 - [吐槽下药品说明书](https://github.com/myogg/Gitblog/issues/21)--2025-01-19
 - [[ 图片 ] 养了两只猫](https://github.com/myogg/Gitblog/issues/18)--2025-01-19
 - [[ 图片 ] 世界上最早的高速公路](https://github.com/myogg/Gitblog/issues/17)--2025-01-19
