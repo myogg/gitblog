@@ -34,7 +34,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
-- [vr](https://github.com/myogg/Gitblog/issues/37)--2025-01-21
+- [r](https://github.com/myogg/Gitblog/issues/38)--2025-01-21
 - [伊拉克国家域名删除始末](https://github.com/myogg/Gitblog/issues/33)--2025-01-20
 - [Vercel 收购代码搜索工具 - Grep](https://github.com/myogg/Gitblog/issues/32)--2025-01-20
 - [[ 胡思乱想 ] Akamai CDN 退出中国](https://github.com/myogg/Gitblog/issues/31)--2025-01-20
@@ -56,7 +56,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [Apple Intelligence 有哪些体验](https://github.com/myogg/Gitblog/issues/29)--2025-01-19
 - [[ Markdown ] An option to highlight a "Note" and "Warning" using blockquote](https://github.com/myogg/Gitblog/issues/28)--2025-01-19
 ## notes
-- [vr](https://github.com/myogg/Gitblog/issues/37)--2025-01-21
+- [r](https://github.com/myogg/Gitblog/issues/38)--2025-01-21
 - [Vercel 收购代码搜索工具 - Grep](https://github.com/myogg/Gitblog/issues/32)--2025-01-20
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 ## Myblog
