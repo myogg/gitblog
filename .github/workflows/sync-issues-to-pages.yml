@@ -23,7 +23,7 @@ jobs:
         pip install requests PyGithub markdown feedgen lxml marko
 
     - name: Run sync script
-      run: python main.py $GITHUB_TOKEN $REPO_NAME
+      run: python main.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
       env:
         GITHUB_TOKEN: ${{ secrets.G_KEY }}
         REPO_NAME: ${{ github.repository }}
