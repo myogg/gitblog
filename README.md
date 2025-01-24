@@ -34,19 +34,20 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
+- [[ 观影 ] 为了全人类 (1989) 4K HDR](https://github.com/myogg/Gitblog/issues/46)--2025-01-24
 - [[ 图片 ] 隋塔](https://github.com/myogg/Gitblog/issues/45)--2025-01-24
 - [[ 观影 ] 驻站](https://github.com/myogg/Gitblog/issues/44)--2025-01-22
 - [猫猫是水做的](https://github.com/myogg/Gitblog/issues/43)--2025-01-22
 - [DeepSeek官方App上线](https://github.com/myogg/Gitblog/issues/42)--2025-01-21
-- [伊拉克国家域名删除始末](https://github.com/myogg/Gitblog/issues/33)--2025-01-20
 ## 一些记录
+- [[ 观影 ] 为了全人类 (1989) 4K HDR](https://github.com/myogg/Gitblog/issues/46)--2025-01-24
 - [[ 图片 ] 隋塔](https://github.com/myogg/Gitblog/issues/45)--2025-01-24
 - [[ 观影 ] 驻站](https://github.com/myogg/Gitblog/issues/44)--2025-01-22
 - [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
-- [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 <details><summary>显示更多</summary>
 
+- [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
 - [TikTok 、CapCut 、lemon8在美国正式关闭](https://github.com/myogg/Gitblog/issues/19)--2025-01-19
 - [错误的数学](https://github.com/myogg/Gitblog/issues/4)--2025-01-19
