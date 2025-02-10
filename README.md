@@ -34,19 +34,20 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
+- [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [[ 胡思乱想 ] 一点小想法。](https://github.com/myogg/Gitblog/issues/54)--2025-02-10
 - [mihomo party什么情况？](https://github.com/myogg/Gitblog/issues/53)--2025-02-08
 - [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
 - [[ 观影 ] 唐探1900，值得一看](https://github.com/myogg/Gitblog/issues/51)--2025-01-30
-- [新年快乐](https://github.com/myogg/Gitblog/issues/50)--2025-01-28
 ## 一些记录
+- [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
 - [[ 观影 ] 为了全人类 (1989) 4K HDR](https://github.com/myogg/Gitblog/issues/46)--2025-01-24
 - [[ 图片 ] 隋塔](https://github.com/myogg/Gitblog/issues/45)--2025-01-24
 - [[ 观影 ] 驻站](https://github.com/myogg/Gitblog/issues/44)--2025-01-22
-- [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 <details><summary>显示更多</summary>
 
+- [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
 - [注册属于自己的 HiDNS 域名](https://github.com/myogg/Gitblog/issues/23)--2025-01-19
 - [特朗普推出加密货币，能买吗？](https://github.com/myogg/Gitblog/issues/20)--2025-01-19
@@ -74,13 +75,14 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </details>
 
 ## Myblog
+- [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [[ 胡思乱想 ] 一点小想法。](https://github.com/myogg/Gitblog/issues/54)--2025-02-10
 - [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
 - [[ 观影 ] 唐探1900，值得一看](https://github.com/myogg/Gitblog/issues/51)--2025-01-30
 - [新年快乐](https://github.com/myogg/Gitblog/issues/50)--2025-01-28
-- [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
 <details><summary>显示更多</summary>
 
+- [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
 - [[ 胡思乱想 ] Akamai CDN 退出中国](https://github.com/myogg/Gitblog/issues/31)--2025-01-20
 - [[ 生活 ] 今秋南方行](https://github.com/myogg/Gitblog/issues/30)--2025-01-20
 - [[  图片 ]  随记](https://github.com/myogg/Gitblog/issues/27)--2025-01-19
