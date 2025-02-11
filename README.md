@@ -34,7 +34,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
-- [干坏事](https://github.com/myogg/Gitblog/issues/64)--2025-02-11
+- [干坏事哥哥哥哥哥](https://github.com/myogg/Gitblog/issues/65)--2025-02-11
 - [[ 观影 ] 《碟中谍8：最后的清算》](https://github.com/myogg/Gitblog/issues/59)--2025-02-11
 - [[ 胡思乱想 ] 算盘打的几里外都能听到响](https://github.com/myogg/Gitblog/issues/58)--2025-02-11
 - [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
@@ -63,7 +63,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [Apple Intelligence 有哪些体验](https://github.com/myogg/Gitblog/issues/29)--2025-01-19
 - [[ Markdown ] An option to highlight a "Note" and "Warning" using blockquote](https://github.com/myogg/Gitblog/issues/28)--2025-01-19
 ## notes
-- [干坏事](https://github.com/myogg/Gitblog/issues/64)--2025-02-11
+- [干坏事哥哥哥哥哥](https://github.com/myogg/Gitblog/issues/65)--2025-02-11
 - [mihomo party什么情况？](https://github.com/myogg/Gitblog/issues/53)--2025-02-08
 - [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
 - [[ 观影 ] 唐探1900，值得一看](https://github.com/myogg/Gitblog/issues/51)--2025-01-30
@@ -77,13 +77,14 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </details>
 
 ## Myblog
+- [干坏事哥哥哥哥哥](https://github.com/myogg/Gitblog/issues/65)--2025-02-11
 - [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
 - [[ 胡思乱想 ]  万恶的小视频](https://github.com/myogg/Gitblog/issues/56)--2025-02-10
 - [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [[ 胡思乱想 ] 一点小想法。](https://github.com/myogg/Gitblog/issues/54)--2025-02-10
-- [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
 <details><summary>显示更多</summary>
 
+- [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
 - [[ 观影 ] 唐探1900，值得一看](https://github.com/myogg/Gitblog/issues/51)--2025-01-30
 - [新年快乐](https://github.com/myogg/Gitblog/issues/50)--2025-01-28
 - [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
