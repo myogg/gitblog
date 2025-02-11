@@ -3,7 +3,7 @@ import os
 
 # 使用 GitHub Token 进行认证
 g = Github(os.getenv('GITHUB_TOKEN'))
-repo = g.get_repo("your-username/your-repo")
+repo = g.get_repo("myogg/Gitblog")
 
 # 获取所有 Issues
 issues = repo.get_issues(state="all")
