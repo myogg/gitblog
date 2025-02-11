@@ -34,11 +34,11 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
+- [[ 胡思乱想 ] 算盘打的几里外都能听到响](https://github.com/myogg/Gitblog/issues/58)--2025-02-11
 - [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
 - [[ 胡思乱想 ]  万恶的小视频](https://github.com/myogg/Gitblog/issues/56)--2025-02-10
 - [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [[ 胡思乱想 ] 一点小想法。](https://github.com/myogg/Gitblog/issues/54)--2025-02-10
-- [mihomo party什么情况？](https://github.com/myogg/Gitblog/issues/53)--2025-02-08
 ## 一些记录
 - [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
@@ -110,5 +110,6 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </details>
 
 ## 突发的一些小想法
+- [[ 胡思乱想 ] 算盘打的几里外都能听到响](https://github.com/myogg/Gitblog/issues/58)--2025-02-11
 - [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
 - [[ 胡思乱想 ]  万恶的小视频](https://github.com/myogg/Gitblog/issues/56)--2025-02-10
