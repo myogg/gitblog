@@ -1,0 +1,19 @@
+name: 更新 GitHub Pages
+
+  on:
+    push:
+      branches:
+        - main
+
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: 检出代码
+          uses: actions/checkout@v2
+
+        - name: 设置 Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./
