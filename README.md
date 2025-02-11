@@ -34,11 +34,11 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
+- [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
 - [[ 胡思乱想 ]  万恶的小视频](https://github.com/myogg/Gitblog/issues/56)--2025-02-10
 - [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [[ 胡思乱想 ] 一点小想法。](https://github.com/myogg/Gitblog/issues/54)--2025-02-10
 - [mihomo party什么情况？](https://github.com/myogg/Gitblog/issues/53)--2025-02-08
-- [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
 ## 一些记录
 - [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
@@ -75,13 +75,14 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </details>
 
 ## Myblog
+- [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
 - [[ 胡思乱想 ]  万恶的小视频](https://github.com/myogg/Gitblog/issues/56)--2025-02-10
 - [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [[ 胡思乱想 ] 一点小想法。](https://github.com/myogg/Gitblog/issues/54)--2025-02-10
 - [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
-- [[ 观影 ] 唐探1900，值得一看](https://github.com/myogg/Gitblog/issues/51)--2025-01-30
 <details><summary>显示更多</summary>
 
+- [[ 观影 ] 唐探1900，值得一看](https://github.com/myogg/Gitblog/issues/51)--2025-01-30
 - [新年快乐](https://github.com/myogg/Gitblog/issues/50)--2025-01-28
 - [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
 - [[ 胡思乱想 ] Akamai CDN 退出中国](https://github.com/myogg/Gitblog/issues/31)--2025-01-20
@@ -108,3 +109,6 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
 </details>
 
+## 突发的一些小想法
+- [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
+- [[ 胡思乱想 ]  万恶的小视频](https://github.com/myogg/Gitblog/issues/56)--2025-02-10
