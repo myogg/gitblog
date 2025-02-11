@@ -34,19 +34,20 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
+- [q](https://github.com/myogg/Gitblog/issues/60)--2025-02-11
 - [[ 观影 ] 《碟中谍8：最后的清算》](https://github.com/myogg/Gitblog/issues/59)--2025-02-11
 - [[ 胡思乱想 ] 算盘打的几里外都能听到响](https://github.com/myogg/Gitblog/issues/58)--2025-02-11
 - [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
 - [[ 胡思乱想 ]  万恶的小视频](https://github.com/myogg/Gitblog/issues/56)--2025-02-10
-- [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 ## 一些记录
+- [q](https://github.com/myogg/Gitblog/issues/60)--2025-02-11
 - [[ 观影 ] 《碟中谍8：最后的清算》](https://github.com/myogg/Gitblog/issues/59)--2025-02-11
 - [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
 - [[ 观影 ] 为了全人类 (1989) 4K HDR](https://github.com/myogg/Gitblog/issues/46)--2025-01-24
-- [[ 图片 ] 隋塔](https://github.com/myogg/Gitblog/issues/45)--2025-01-24
 <details><summary>显示更多</summary>
 
+- [[ 图片 ] 隋塔](https://github.com/myogg/Gitblog/issues/45)--2025-01-24
 - [[ 观影 ] 驻站](https://github.com/myogg/Gitblog/issues/44)--2025-01-22
 - [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
