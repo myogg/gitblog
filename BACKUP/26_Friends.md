@@ -1,0 +1,26 @@
+# [Friends](https://github.com/myogg/Gitblog/issues/26)
+
+ 这个 Issue 是友情链接的 Issue, 如果你想加到友情链接里，请在这条 Issue 上评论，我打心后会自动加到友情链接里。感谢大家。
+
+
+
+ 格式如下（请参考我下面的 comment）: 冒号为中文冒号 ：
+
+名字：xxxxxx 
+链接：xxxxxx 
+描述：xxxxxx
+ 
+  added al
+
+
+
+
+
+
+
+
+---
+
+名字：做个有意思的人
+链接：https://829259.xyz
+描述：做个有意思的人
