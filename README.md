@@ -34,7 +34,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
-- [qqdd](https://github.com/myogg/Gitblog/issues/62)--2025-02-11
+- [qqddxxx](https://github.com/myogg/Gitblog/issues/63)--2025-02-11
 - [[ 观影 ] 《碟中谍8：最后的清算》](https://github.com/myogg/Gitblog/issues/59)--2025-02-11
 - [[ 胡思乱想 ] 算盘打的几里外都能听到响](https://github.com/myogg/Gitblog/issues/58)--2025-02-11
 - [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
@@ -63,7 +63,7 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [Apple Intelligence 有哪些体验](https://github.com/myogg/Gitblog/issues/29)--2025-01-19
 - [[ Markdown ] An option to highlight a "Note" and "Warning" using blockquote](https://github.com/myogg/Gitblog/issues/28)--2025-01-19
 ## notes
-- [qqdd](https://github.com/myogg/Gitblog/issues/62)--2025-02-11
+- [qqddxxx](https://github.com/myogg/Gitblog/issues/63)--2025-02-11
 - [mihomo party什么情况？](https://github.com/myogg/Gitblog/issues/53)--2025-02-08
 - [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
 - [[ 观影 ] 唐探1900，值得一看](https://github.com/myogg/Gitblog/issues/51)--2025-01-30
