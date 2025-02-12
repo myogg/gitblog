@@ -34,19 +34,20 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 </table>
 
 ## 最近更新
-- [cwshi](https://github.com/myogg/Gitblog/issues/67)--2025-02-12
+- [Duolingo宣布吉祥物Duo已去世](https://github.com/myogg/Gitblog/issues/68)--2025-02-12
 - [祝自己元宵节快乐](https://github.com/myogg/Gitblog/issues/66)--2025-02-12
 - [[ 观影 ] 《碟中谍8：最后的清算》](https://github.com/myogg/Gitblog/issues/59)--2025-02-11
 - [[ 胡思乱想 ] 算盘打的几里外都能听到响](https://github.com/myogg/Gitblog/issues/58)--2025-02-11
 - [[ 胡思乱想 ] 屯洗洁精](https://github.com/myogg/Gitblog/issues/57)--2025-02-11
 ## 一些记录
+- [Duolingo宣布吉祥物Duo已去世](https://github.com/myogg/Gitblog/issues/68)--2025-02-12
 - [[ 观影 ] 《碟中谍8：最后的清算》](https://github.com/myogg/Gitblog/issues/59)--2025-02-11
 - [[ 分享故事 ]  心灯明亮，则佛性自现](https://github.com/myogg/Gitblog/issues/55)--2025-02-10
 - [搡年糕](https://github.com/myogg/Gitblog/issues/47)--2025-01-25
 - [[ 观影 ] 为了全人类 (1989) 4K HDR](https://github.com/myogg/Gitblog/issues/46)--2025-01-24
-- [[ 图片 ] 隋塔](https://github.com/myogg/Gitblog/issues/45)--2025-01-24
 <details><summary>显示更多</summary>
 
+- [[ 图片 ] 隋塔](https://github.com/myogg/Gitblog/issues/45)--2025-01-24
 - [[ 观影 ] 驻站](https://github.com/myogg/Gitblog/issues/44)--2025-01-22
 - [苹果发布iPhone屏下Face ID“隐身术”新专利](https://github.com/myogg/Gitblog/issues/25)--2025-01-19
 - [[ 生活 ]  2024年的最后一个月,我做了痔疮手术,](https://github.com/myogg/Gitblog/issues/24)--2025-01-19
@@ -63,14 +64,13 @@ My personal blog using issues and GitHub Actions (参考[yihong](https://github.
 - [Apple Intelligence 有哪些体验](https://github.com/myogg/Gitblog/issues/29)--2025-01-19
 - [[ Markdown ] An option to highlight a "Note" and "Warning" using blockquote](https://github.com/myogg/Gitblog/issues/28)--2025-01-19
 ## notes
-- [cwshi](https://github.com/myogg/Gitblog/issues/67)--2025-02-12
 - [mihomo party什么情况？](https://github.com/myogg/Gitblog/issues/53)--2025-02-08
 - [那么，我的青春呢.](https://github.com/myogg/Gitblog/issues/52)--2025-02-02
 - [[ 观影 ] 唐探1900，值得一看](https://github.com/myogg/Gitblog/issues/51)--2025-01-30
 - [一个频道主的心声，挣钱比较难，所以没动力。](https://github.com/myogg/Gitblog/issues/49)--2025-01-26
+- [Telegram频道主注意了：群组聊天中每10条消息插入广告](https://github.com/myogg/Gitblog/issues/48)--2025-01-26
 <details><summary>显示更多</summary>
 
-- [Telegram频道主注意了：群组聊天中每10条消息插入广告](https://github.com/myogg/Gitblog/issues/48)--2025-01-26
 - [猫猫是水做的](https://github.com/myogg/Gitblog/issues/43)--2025-01-22
 - [Vercel 收购代码搜索工具 - Grep](https://github.com/myogg/Gitblog/issues/32)--2025-01-20
 - [2025](https://github.com/myogg/Gitblog/issues/1)--2025-01-19
