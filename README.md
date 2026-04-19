@@ -15,16 +15,17 @@ My personal blog using issues and GitHub Actions
 
 [RSS Feed](https://raw.githubusercontent.com/myogg/gitblog/master/feed.xml)
 
-## 正文 (18篇文章)
+## 正文 (19篇文章)
+- [NVIDIA NIM 上线了 GLM-5.1 等大模型，免费开放 API 使用](https://github.com/myogg/gitblog/issues/30)--2026-04-19
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)--2026-04-17
 - [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)--2026-04-17
 - [Perplexity 发布 Personal Computer 软件](https://github.com/myogg/gitblog/issues/22)--2026-04-17
 - [iPhone 忠诚度升至 96.4% 创历史新高](https://github.com/myogg/gitblog/issues/21)--2026-04-17
-- [DeepSeek 发布 DeepGEMM 重大更新：推出 Mega MoE 融合算子并支持 FP4 精度](https://github.com/myogg/gitblog/issues/19)--2026-04-16
 
 <details>
-<summary>显示更多 (13篇)</summary>
+<summary>显示更多 (14篇)</summary>
 
+- [DeepSeek 发布 DeepGEMM 重大更新：推出 Mega MoE 融合算子并支持 FP4 精度](https://github.com/myogg/gitblog/issues/19)
 - [IETF 发布 IPv8 草案：实现 100% 向后兼容并解决地址枯竭](https://github.com/myogg/gitblog/issues/18)
 - [cloudflare 提供安全的私有网络——隆重推出 Cloudflare Mesh](https://github.com/myogg/gitblog/issues/17)
 - [多家境内银行发行的万事达卡支持绑定到 Apple Pay](https://github.com/myogg/gitblog/issues/14)
@@ -44,7 +45,8 @@ My personal blog using issues and GitHub Actions
 ## 世界好精彩我想去转转 (1篇文章)
 - [竹筍的超級潛力：它為何是營養界的黑馬？](https://github.com/myogg/gitblog/issues/15)--2026-04-16
 
-## 碎碎念 (3篇文章)
+## 碎碎念 (4篇文章)
+- [NVIDIA NIM 上线了 GLM-5.1 等大模型，免费开放 API 使用](https://github.com/myogg/gitblog/issues/30)--2026-04-19
 - [一杯烈酒入喉](https://github.com/myogg/gitblog/issues/23)--2026-04-17
 - [Telegram官方已集成中文语言选项](https://github.com/myogg/gitblog/issues/20)--2026-04-17
 - [这小视频是不能看，看一场哭一场！](https://github.com/myogg/gitblog/issues/16)--2026-04-16
