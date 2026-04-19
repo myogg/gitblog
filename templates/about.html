@@ -18,21 +18,48 @@
     .about-left {
         flex: 1;
         min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .about-right {
         flex: 1;
         min-width: 0;
+        display: flex;
+        align-items: center;
     }
 
-    .about-text {
-        line-height: 1.8;
+    .about-bio {
+        margin-bottom: 2rem;
+    }
+
+    .about-bio p {
+        line-height: 2;
         color: var(--text-secondary);
         font-size: 1.05rem;
+        margin-bottom: 1.25rem;
     }
 
-    .about-text p {
-        margin-bottom: 1rem;
+    .about-bio p:last-child {
+        margin-bottom: 0;
+    }
+
+    .about-divider {
+        width: 3rem;
+        height: 2px;
+        background: var(--border-hover);
+        margin: 2rem 0;
+        border-radius: 1px;
+    }
+
+    .about-motto {
+        font-style: italic;
+        color: var(--text-tertiary);
+        font-size: 0.95rem;
+        line-height: 1.8;
+        border-left: 3px solid var(--border-hover);
+        padding-left: 1rem;
     }
 
     .about-image-wrapper {
@@ -41,6 +68,7 @@
         border: 1px solid var(--border-color);
         background-color: var(--bg-secondary);
         transition: all 0.3s ease;
+        width: 100%;
     }
 
     .about-image-wrapper:hover {
@@ -123,9 +151,14 @@
 
 <div class="about-layout">
     <div class="about-left">
-        <div class="about-text">
-            <p>Over fifty, a manual laborer whose only passion is the internet. I've wandered through forums, blogs, and open-source projects, repeatedly mocked with: "We can't teach you, just watch." Since AI came along, I no longer have to live by anyone else's approval. I tinker for myself, I live for myself, that's all!</p>
-            <p>Using my words to record my wild thoughts and fleeting moments of life, my crazy ideas and the actions they might inspire.</p>
+        <div class="about-bio">
+            <p>Over fifty, a manual laborer whose only passion is the internet.</p>
+            <p>I've wandered through forums, blogs, and open-source projects, repeatedly mocked with: <em>"We can't teach you, just watch."</em></p>
+            <p>Since AI came along, I no longer have to live by anyone else's approval. I tinker for myself, I live for myself, that's all!</p>
+        </div>
+        <div class="about-divider"></div>
+        <div class="about-motto">
+            Using my words to record my wild thoughts and fleeting moments of life, my crazy ideas and the actions they might inspire.
         </div>
     </div>
     <div class="about-right">
