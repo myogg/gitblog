@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}关于 - 姜小小{% endblock %}
+{% block title %}关于 - &lt;/&gt;北方的博客{% endblock %}
 
 {% block description %}关于博客 - 记录技术见解、生活感悟和成长心得。{% endblock %}
 
-{% block keywords %}关于,姜小小,个人简介{% endblock %}
+{% block keywords %}关于,xxjss,程序员,个人简介{% endblock %}
 
 {% block head_extra %}
 <style>
@@ -48,7 +48,7 @@
     .about-divider {
         width: 3rem;
         height: 2px;
-        background: var(--accent-color);
+        background: var(--border-hover);
         margin: 2rem 0;
         border-radius: 1px;
     }
@@ -58,7 +58,7 @@
         color: var(--text-tertiary);
         font-size: 0.95rem;
         line-height: 1.8;
-        border-left: 3px solid var(--accent-color);
+        border-left: 3px solid var(--border-hover);
         padding-left: 1rem;
     }
 
@@ -72,7 +72,7 @@
     }
 
     .about-image-wrapper:hover {
-        border-color: var(--accent-color);
+        border-color: var(--border-hover);
         transform: translateY(-2px);
         box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.12);
     }
@@ -116,7 +116,7 @@
 
     .link-card:hover {
         background: var(--bg-hover);
-        border-color: var(--accent-color);
+        border-color: var(--border-hover);
         transform: translateY(-2px);
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
@@ -138,6 +138,7 @@
             flex-direction: column;
             gap: 2rem;
         }
+
         .about-right {
             display: none;
         }
