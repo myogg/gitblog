@@ -3,32 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}&lt;/&gt;北方的博客{% endblock %}</title>
-    <meta name="description" content="{% block description %}xxjss - 记录技术、生活和思考。探索编程、人工智能、个人成长等话题。{% endblock %}">
+    <title>{% block title %}姜小小 - 先做，然后做好，接着做的更好{% endblock %}</title>
+    <meta name="description" content="{% block description %}记录技术、生活和思考。探索编程、人工智能、个人成长等话题。{% endblock %}">
     <meta name="keywords" content="{% block keywords %}博客,技术博客,编程,AI,个人成长{% endblock %}">
     <meta name="author" content="xxjss">
 
-    <meta property="og:title" content="xxjss">
+    <meta property="og:title" content="姜小小">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://134688.xyz/">
-    <meta property="og:description" content="xxjss - 记录技术、生活和思考。探索编程、人工智能、个人成长等话题。">
-    <meta property="og:site_name" content="xxjss">
+    <meta property="og:description" content="记录技术、生活和思考。探索编程、人工智能、个人成长等话题。">
+    <meta property="og:site_name" content="姜小小">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% if base_path %}{{base_path}}{% endif %}static/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {}
-            }
-        }
-    </script>
 
     {% block head_extra %}{% endblock %}
 
@@ -36,64 +26,45 @@
     {
         "@context": "https://schema.org",
         "@type": "Blog",
-        "name": "xxjss",
-        "description": "记录技术、生活和思考。探索编程、人工智能、个人成长等话题。",
+        "name": "姜小小",
+        "description": "记录技术、生活和思考。",
         "url": "https://134688.xyz",
         "inLanguage": "zh-CN",
         "author": {
             "@type": "Person",
             "name": "xxjss",
             "url": "https://134688.xyz/about.html",
-            "sameAs": [
-                "https://github.com/myogg",
-                "https://www.facebook.com/lengyu.jiang"
-            ]
+            "sameAs": ["https://github.com/myogg"]
         }
     }
     </script>
 </head>
 <body data-theme="light">
-    <header class="site-header">
+
+    <!-- ========== 顶部大图区域 ========== -->
+    <div class="page-header">
+        <div class="header-overlay"></div>
         <div class="header-content">
-            <a href="{% if base_path %}{{base_path}}{% endif %}index.html" class="site-logo">xxjss</a>
-            <div class="header-right">
-                <div class="dropdown">
-                    <button class="dropdown-toggle" id="menuToggle">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                            <line x1="3" y1="8" x2="21" y2="8"></line>
-                            <line x1="3" y1="16" x2="21" y2="16"></line>
-                        </svg>
-                    </button>
-                    <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="{% if base_path %}{{base_path}}{% endif %}blog.html">博客</a>
-                        <a href="{% if base_path %}{{base_path}}{% endif %}search.html">搜索</a>
-                        <a href="{% if base_path %}{{base_path}}{% endif %}about.html">关于</a>
-                    </div>
-                </div>
-                <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
-                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
-            </div>
+            <h1 class="site-title"><a href="{% if base_path %}{{base_path}}{% endif %}index.html">姜小小</a></h1>
+            <div class="site-description">先做，然后做好，接着做的更好。</div>
         </div>
-    </header>
+    </div>
+
+    <!-- ========== 导航菜单 ========== -->
+    <div class="nav-wrapper">
+        <button class="menu-toggle" id="menuToggle">☰ 菜单</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="{% if base_path %}{{base_path}}{% endif %}index.html">首页</a></li>
+            <li><a href="{% if base_path %}{{base_path}}{% endif %}blog.html">博客</a></li>
+            <li><a href="{% if base_path %}{{base_path}}{% endif %}search.html">搜索</a></li>
+            <li><a href="{% if base_path %}{{base_path}}{% endif %}about.html">关于</a></li>
+        </ul>
+    </div>
 
     <main class="container">
         {% block content %}
         {% if pagination and pagination.current_page == 1 %}
-        {# 首页新布局 - 类似 index.astro #}
+        {# 首页布局 #}
         <div class="homepage-layout">
             <div class="relative z-20 w-full max-w-4xl mx-auto mt-4 px-7 md:mt-8 lg:mt-12 xl:px-0">
                 <div class="flex flex-col items-center md:flex-row">
@@ -113,6 +84,21 @@
                         <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
                             I'll be here to chat about life, or any other topics that interest me.
                         </p>
+
+                        <!-- 社交图标 - 透明 GitHub 和邮箱 -->
+                        <div class="social-links">
+                            <a href="https://github.com/myogg" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.21.68-.48 0-.24-.01-.88-.01-1.74-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.91.68 1.84 0 1.33-.01 2.4-.01 2.73 0 .27.18.58.69.48 3.97-1.32 6.84-5.07 6.84-9.49 0-5.52-4.48-10-10-10z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:xxjss@hotmail.com" class="social-link" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                                    <polyline points="22,7 12,13 2,7"></polyline>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                     <div class="relative justify-end hidden w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0">
                         <div class="relative z-50 w-full">
@@ -138,9 +124,8 @@
                     <span class="mx-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Check out my projects</span>
                     <div class="flex-grow border-t border-gray-300 dark:border-gray-700"></div>
                 </div>
-                {# 项目展示 - 参考 astro-aria projects.astro #}
                 <div class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                    {# TimeAPK 项目 #}
+                    <!-- TimeAPK 项目 -->
                     <a href="https://github.com/myogg/timeapk" target="_blank" class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl">
                         <span class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"></span>
                         <span class="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"></span>
@@ -167,7 +152,7 @@
                         </span>
                     </a>
 
-                    {# IPTV 项目 #}
+                    <!-- IPTV 项目 -->
                     <a href="https://github.com/myogg/iptv" target="_blank" class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl">
                         <span class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"></span>
                         <span class="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"></span>
@@ -194,7 +179,7 @@
                         </span>
                     </a>
 
-                    {# Astro 项目 #}
+                    <!-- Astro 项目 -->
                     <a href="https://github.com/myogg/astro" target="_blank" class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl">
                         <span class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"></span>
                         <span class="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"></span>
@@ -230,7 +215,6 @@
                     <span class="mx-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Some of my writing</span>
                     <div class="flex-grow border-t border-gray-300 dark:border-gray-700"></div>
                 </div>
-                {# 最新文章列表 #}
                 <div class="space-y-6">
                     {% if articles and articles|length > 0 %}
                         {% for article in articles[:5] %}
@@ -330,7 +314,7 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-logo">xxjss</div>
+        <div class="footer-logo">姜小小</div>
         <div class="footer-copyright">© 2026 北方的博客</div>
     </footer>
 
@@ -339,6 +323,8 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">🌙</button>
 
     <script src="{% if base_path %}{{base_path}}{% endif %}static/script.js"></script>
 </body>
