@@ -1,12 +1,14 @@
 # [Copy Fail 曝光：Linux 本地提权漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)
 
-4 月 29 日，安全研究方公开 Copy Fail（CVE-2026-31431）。这是 Linux 内核 crypto AF_ALG/algif_aead 路径中的本地提权漏洞。kernel.org 给出的 CVSS 3.1 分数为 7.8，向量为 AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H；Ubuntu 将其列为 High，理由是“trivial local privilege escalation”。
+4 月 29 日，安全研究方公开 Copy Fail（CVE-2026-31431）。
 
-<! --more-- >
+这是 Linux 内核 crypto AF_ALG/algif_aead 路径中的本地提权漏洞。kernel.org 给出的 CVSS 3.1 分数为 7.8，向量为 AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H；Ubuntu 将其列为 High，理由是“trivial local privilege escalation”。
 
 ![vintage-tech-01.jpg](https://i.829259.xyz/api/rfile/vintage-tech-01.jpg)
 
-该漏洞不是远程漏洞。攻击者需要先拥有目标机器上的低权限本地账户，并能在本机执行代码；目标系统还需要可达或已加载 algif_aead 相关内核路径。漏洞核心在于 AF_ALG AEAD 的一次“原地处理”优化错误地把来自 splice() 的文件页缓存挂进可写 scatterlist，authencesn 解密路径随后可在认证失败前写入 4 个攻击者可控字节。
+该漏洞不是远程漏洞。攻击者需要先拥有目标机器上的低权限本地账户，并能在本机执行代码；目标系统还需要可达或已加载 algif_aead 相关内核路径。
+
+漏洞核心在于 AF_ALG AEAD 的一次“原地处理”优化错误地把来自 splice() 的文件页缓存挂进可写 scatterlist，authencesn 解密路径随后可在认证失败前写入 4 个攻击者可控字节。
 
 实际利用思路是：攻击者选择一个自己可读的文件，将其页缓存页通过 splice() 带入内核 crypto 路径，再触发 authencesn 的越界式 scratch write。每次请求可改写页缓存中的 4 个受控字节，反复执行后可临时篡改 setuid-root 程序的缓存内容，例如 su。随后系统从被污染的页缓存加载该程序，可能导致本地 root 权限获取。这里影响的是内存中的页缓存，并非直接改写磁盘文件，但在缓存被回收或刷新前已经足以造成提权风险。
 
