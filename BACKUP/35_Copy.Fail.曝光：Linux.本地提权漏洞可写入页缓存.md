@@ -2,7 +2,7 @@
 
 4 月 29 日，安全研究方公开 Copy Fail（CVE-2026-31431）。这是 Linux 内核 crypto AF_ALG/algif_aead 路径中的本地提权漏洞。kernel.org 给出的 CVSS 3.1 分数为 7.8，向量为 AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H；Ubuntu 将其列为 High，理由是“trivial local privilege escalation”。
 
-<!--more-->
+<! --more-- >
 
 ![vintage-tech-01.jpg](https://i.829259.xyz/api/rfile/vintage-tech-01.jpg)
 
