@@ -5,49 +5,36 @@ function initTheme() {
     const themeToggle = document.getElementById('themeToggle');
     if (!themeToggle) return;
 
-    const htmlEl = document.documentElement;
     const bodyEl = document.body;
-
-    // 从 localStorage 读取主题
     const savedTheme = localStorage.getItem('theme') || 'light';
     bodyEl.setAttribute('data-theme', savedTheme);
-    if (savedTheme === 'dark') {
-        htmlEl.classList.add('dark');
-    } else {
-        htmlEl.classList.remove('dark');
-    }
+    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
     themeToggle.addEventListener('click', () => {
         const currentTheme = bodyEl.getAttribute('data-theme');
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         bodyEl.setAttribute('data-theme', newTheme);
-        
-        if (newTheme === 'dark') {
-            htmlEl.classList.add('dark');
-        } else {
-            htmlEl.classList.remove('dark');
-        }
-        
+        themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         localStorage.setItem('theme', newTheme);
     });
 }
 
 // ============================================
-// 下拉菜单功能
+// 移动端菜单功能
 // ============================================
-function initDropdown() {
+function initMobileMenu() {
     const menuToggle = document.getElementById('menuToggle');
-    const dropdownMenu = document.getElementById('dropdownMenu');
+    const navMenu = document.getElementById('navMenu');
     
-    if (!menuToggle || !dropdownMenu) return;
+    if (!menuToggle || !navMenu) return;
 
     menuToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        dropdownMenu.classList.toggle('show');
+        navMenu.classList.toggle('active');
     });
 
     document.addEventListener('click', () => {
-        dropdownMenu.classList.remove('show');
+        navMenu.classList.remove('active');
     });
 }
 
@@ -88,7 +75,7 @@ function initBackToTop() {
 }
 
 // ============================================
-// 复制 RSS 地址（供全局调用）
+// 复制 RSS 地址
 // ============================================
 window.copyRssUrl = function(event) {
     const urlInput = document.getElementById('rssUrl');
@@ -106,7 +93,6 @@ window.copyRssUrl = function(event) {
             btn.textContent = originalText;
         }, 2000);
     }).catch(() => {
-        // 兼容旧浏览器
         document.execCommand('copy');
         btn.textContent = '已复制!';
         setTimeout(() => {
@@ -120,7 +106,7 @@ window.copyRssUrl = function(event) {
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     initTheme();
-    initDropdown();
+    initMobileMenu();
     initHeaderScroll();
     initBackToTop();
 });
