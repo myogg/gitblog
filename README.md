@@ -15,16 +15,17 @@ My personal blog using issues and GitHub Actions
 
 [RSS Feed](https://raw.githubusercontent.com/myogg/gitblog/master/feed.xml)
 
-## 正文 (20篇文章)
+## 正文 (21篇文章)
+- [B 站开启纪录片开放周](https://github.com/myogg/gitblog/issues/34)--2026-05-01
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
 - [NVIDIA NIM 上线了 GLM-5.1 等大模型，免费开放 API 使用](https://github.com/myogg/gitblog/issues/30)--2026-04-19
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)--2026-04-17
 - [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)--2026-04-17
-- [Perplexity 发布 Personal Computer 软件](https://github.com/myogg/gitblog/issues/22)--2026-04-17
 
 <details>
-<summary>显示更多 (15篇)</summary>
+<summary>显示更多 (16篇)</summary>
 
+- [Perplexity 发布 Personal Computer 软件](https://github.com/myogg/gitblog/issues/22)
 - [iPhone 忠诚度升至 96.4% 创历史新高](https://github.com/myogg/gitblog/issues/21)
 - [DeepSeek 发布 DeepGEMM 重大更新：推出 Mega MoE 融合算子并支持 FP4 精度](https://github.com/myogg/gitblog/issues/19)
 - [IETF 发布 IPv8 草案：实现 100% 向后兼容并解决地址枯竭](https://github.com/myogg/gitblog/issues/18)
