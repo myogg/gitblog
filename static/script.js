@@ -5,36 +5,49 @@ function initTheme() {
     const themeToggle = document.getElementById('themeToggle');
     if (!themeToggle) return;
 
+    const htmlEl = document.documentElement;
     const bodyEl = document.body;
+
+    // 从 localStorage 读取主题
     const savedTheme = localStorage.getItem('theme') || 'light';
     bodyEl.setAttribute('data-theme', savedTheme);
-    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    if (savedTheme === 'dark') {
+        htmlEl.classList.add('dark');
+    } else {
+        htmlEl.classList.remove('dark');
+    }
 
     themeToggle.addEventListener('click', () => {
         const currentTheme = bodyEl.getAttribute('data-theme');
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         bodyEl.setAttribute('data-theme', newTheme);
-        themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        
+        if (newTheme === 'dark') {
+            htmlEl.classList.add('dark');
+        } else {
+            htmlEl.classList.remove('dark');
+        }
+        
         localStorage.setItem('theme', newTheme);
     });
 }
 
 // ============================================
-// 移动端菜单功能
+// 下拉菜单功能
 // ============================================
-function initMobileMenu() {
+function initDropdown() {
     const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
+    const dropdownMenu = document.getElementById('dropdownMenu');
     
-    if (!menuToggle || !navMenu) return;
+    if (!menuToggle || !dropdownMenu) return;
 
     menuToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        navMenu.classList.toggle('active');
+        dropdownMenu.classList.toggle('show');
     });
 
     document.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+        dropdownMenu.classList.remove('show');
     });
 }
 
@@ -75,7 +88,7 @@ function initBackToTop() {
 }
 
 // ============================================
-// 复制 RSS 地址
+// 复制 RSS 地址（供全局调用）
 // ============================================
 window.copyRssUrl = function(event) {
     const urlInput = document.getElementById('rssUrl');
@@ -93,6 +106,7 @@ window.copyRssUrl = function(event) {
             btn.textContent = originalText;
         }, 2000);
     }).catch(() => {
+        // 兼容旧浏览器
         document.execCommand('copy');
         btn.textContent = '已复制!';
         setTimeout(() => {
@@ -106,7 +120,7 @@ window.copyRssUrl = function(event) {
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     initTheme();
-    initMobileMenu();
+    initDropdown();
     initHeaderScroll();
     initBackToTop();
 });
