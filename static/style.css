@@ -443,8 +443,9 @@ body[data-theme="dark"] .moon-icon {
     transform: translateY(-2px);
 }
 
+/* 首页文章标题 - 改小一号（原1rem → 0.9375rem） */
 .article-card-title {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.025em;
@@ -572,7 +573,7 @@ body[data-theme="dark"] .moon-icon {
 }
 
 /* 响应式设计 */
-/* 较大屏幕 (≥640px) - 参考 miantiao.me */
+/* 较大屏幕 (≥640px) - 博客页标题改大一号（原1.125rem → 1.25rem） */
 @media (min-width: 640px) {
     .page-heading {
         font-size: 1.875rem;
@@ -580,7 +581,7 @@ body[data-theme="dark"] .moon-icon {
     }
 
     .article-card-title {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         line-height: 1.25;
     }
 }
