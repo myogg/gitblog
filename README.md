@@ -53,7 +53,8 @@ My personal blog using issues and GitHub Actions
 - [Telegram官方已集成中文语言选项](https://github.com/myogg/gitblog/issues/20)--2026-04-17
 - [这小视频是不能看，看一场哭一场！](https://github.com/myogg/gitblog/issues/16)--2026-04-16
 
-## 2026 (2篇文章)
+## 2026 (3篇文章)
+- [Copy Fail 曝光：Linux 本地提权漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)--2026-05-01
 - [cloudflare 提供安全的私有网络——隆重推出 Cloudflare Mesh](https://github.com/myogg/gitblog/issues/17)--2026-04-16
 - [侠影](https://github.com/myogg/gitblog/issues/2)--2026-04-15
 
@@ -71,7 +72,8 @@ My personal blog using issues and GitHub Actions
 
 </details>
 
-## 一些记录 (3篇文章)
+## 一些记录 (4篇文章)
+- [Copy Fail 曝光：Linux 本地提权漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)--2026-05-01
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)--2026-04-17
 - [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)--2026-04-17
