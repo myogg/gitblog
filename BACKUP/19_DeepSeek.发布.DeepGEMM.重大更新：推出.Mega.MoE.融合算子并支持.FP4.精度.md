@@ -2,6 +2,8 @@
 
 DeepSeek 旗下高性能算子库 DeepGEMM 于 2026 年 4 月 16 日发布重大更新，正式推出 Mega MoE 融合算子。
 
+<!-- more -->
+
 ![IMG_20260416_204442_784.jpg](https://i.829259.xyz/api/rfile/IMG_20260416_204442_784.jpg)
 
 该算子通过将 dispatch、SwiGLU 等多个计算步骤与 NVLink 通信重叠，实现了计算与通信的高效融合。此外，本次更新还新增了 FP8xFP4 GEMM 算子、FP4 Indexer 以及 PDL（程序化依赖启动）支持，并显著提升了 JIT 编译速度。
