@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}{{issue.title}} - &lt;/&gt;北方的博客{% endblock %}
+{% block title %}{{issue.title}} - 姜小小{% endblock %}
 
-{% block description %}{% if issue.summary %}{{issue.summary[:200]}}{% else %}</>北方的博客 - {{issue.title}}。记录技术、生活和思考。{% endif %}{% endblock %}
+{% block description %}{% if issue.summary %}{{issue.summary[:200]}}{% else %}姜小小 - {{issue.title}}。记录技术、生活和思考。{% endif %}{% endblock %}
 
 {% block keywords %}{% for label in labels_data %}{{label.name}}{% if not loop.last %},{% endif %}{% endfor %}{% if content_tags %}{% for tag in content_tags %},{{tag.name}}{% endfor %}{% endif %}{% endblock %}
 
@@ -14,13 +14,13 @@
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="{{issue.title}}">
-<meta property="og:description" content="{% if issue.summary %}{{issue.summary[:150]}}{% else %}xxjss - 记录技术、生活和思考{% endif %}">
+<meta property="og:description" content="{% if issue.summary %}{{issue.summary[:150]}}{% else %}姜小小 - 记录技术、生活和思考{% endif %}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://134688.xyz/articles/article-{{issue.number}}.html">
 <meta property="og:image" content="https://134688.xyz/static/og-default.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:site_name" content="xxjss">
+<meta property="og:site_name" content="姜小小">
 <meta property="article:published_time" content="{{issue.created_at.isoformat()}}">
 {% for label in labels_data %}
 <meta property="article:tag" content="{{label.name}}">
@@ -29,7 +29,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{issue.title}}">
-<meta name="twitter:description" content="{% if issue.summary %}{{issue.summary[:150]}}{% else %}xxjss - 记录技术、生活和思考{% endif %}">
+<meta name="twitter:description" content="{% if issue.summary %}{{issue.summary[:150]}}{% else %}姜小小 - 记录技术、生活和思考{% endif %}">
 <meta name="twitter:image" content="https://134688.xyz/static/og-default.png">
 
 <!-- CSS -->
@@ -45,14 +45,14 @@
     "headline": "{{issue.title}}",
     "description": "{% if issue.summary %}{{issue.summary[:200]}}{% else %}{{issue.title}}{% endif %}",
     "datePublished": "{{issue.created_at.isoformat()}}",
-    "author": {"@type": "Person", "name": "xxjss", "url": "https://134688.xyz/about.html"},
+    "author": {"@type": "Person", "name": "姜小小", "url": "https://134688.xyz/about.html"},
     "keywords": "{% for label in labels_data %}{{label.name}}{% if not loop.last %}, {% endif %}{% endfor %}"
 }
 </script>
 
 <style>
-    /* ========== 文章页面专属样式 ========== */
-    
+    /* ========== Puma 风格文章页面 ========== */
+
     /* 阅读进度条 */
     .reading-progress {
         position: fixed;
@@ -60,63 +60,62 @@
         left: 0;
         width: 0;
         height: 3px;
-        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        background: var(--puma-main-color);
         z-index: 1000;
         transition: width 0.1s ease;
-        box-shadow: 0 0 10px rgba(59,130,246,0.5);
     }
 
-    /* 文章容器 - 限制最大宽度提升阅读体验 */
+    /* 文章容器 */
     .article-wrapper {
         max-width: 780px;
         margin: 0 auto;
     }
 
-    /* 文章头部 */
+    /* 文章头部 - Puma 居中风格 */
     .article-header {
         margin-bottom: 2.5rem;
         padding-bottom: 2rem;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 2px solid var(--puma-border-color-light);
+        text-align: center;
     }
 
     .article-title-text {
-        font-size: 2.5rem;
-        font-weight: 700;
-        line-height: 1.2;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.4;
         margin-bottom: 1rem;
-        color: var(--text-primary);
-        letter-spacing: -0.02em;
+        color: var(--puma-text-color);
     }
+
 
     .article-meta {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        justify-content: center;
+        gap: 1rem;
         margin-bottom: 1.25rem;
         flex-wrap: wrap;
     }
 
     .post-date {
-        font-family: var(--font-mono);
         font-size: 0.875rem;
-        color: var(--text-tertiary);
+        color: var(--puma-text-light);
     }
 
     .read-time {
-        font-family: var(--font-mono);
         font-size: 0.875rem;
-        color: var(--text-tertiary);
+        color: var(--puma-text-light);
     }
 
-    /* 标签样式 */
+    /* 标签样式 - Puma 风格 */
     .article-tags {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
         align-items: center;
+        justify-content: center;
     }
 
-    /* 播放器在标签行内 */
     .article-tags .audio-player {
         display: inline-flex;
         align-items: center;
@@ -149,26 +148,27 @@
     .content-tag {
         display: inline-block;
         padding: 0.375rem 0.875rem;
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
+        background: var(--puma-background-gray-light);
+        border: 1px solid var(--puma-border-color-light);
         border-radius: 1.5rem;
         font-size: 0.75rem;
-        color: var(--text-secondary);
+        color: var(--puma-text-light);
         text-decoration: none;
         transition: all 0.2s ease;
     }
 
     .content-tag:hover {
-        background: var(--bg-hover);
-        border-color: var(--border-hover);
-        color: var(--text-primary);
+        background: var(--puma-background-white);
+        border-color: var(--puma-border-color);
+        color: var(--puma-text-color);
     }
 
-    /* 文章内容区 - 优化阅读体验 */
+    /* 文章内容区 - Puma 风格 */
     .markdown-body {
         font-family: var(--font-sans);
         font-size: 1rem;
         line-height: 1.8;
+        color: var(--puma-text-color);
         background: transparent !important;
         max-width: 100% !important;
         padding: 0 !important;
@@ -182,8 +182,9 @@
     .markdown-body h4 {
         margin-top: 2rem;
         margin-bottom: 1rem;
-        font-weight: 600;
-        line-height: 1.3;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--puma-text-color);
     }
 
     .markdown-body h1 {
@@ -193,7 +194,7 @@
     .markdown-body h2 {
         font-size: 1.5rem;
         padding-bottom: 0.5rem;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 2px solid var(--puma-border-color-light);
     }
     .markdown-body h3 {
         font-size: 1.25rem;
@@ -204,28 +205,30 @@
 
     .markdown-body p {
         margin-bottom: 1.25rem;
+        color: var(--puma-text-light);
     }
 
-    /* 首字下沉 - 仅文章第一段 */
-    .markdown-body > p:first-of-type::first-letter {
-        font-size: 3.5rem;
-        font-weight: 600;
-        float: left;
-        line-height: 0.8;
-        margin-right: 0.5rem;
-        color: var(--text-primary);
+    .markdown-body a {
+        color: var(--puma-main-color);
+        text-decoration: none;
+        transition: color 0.2s ease;
     }
 
-    /* 引用块优化 */
+    .markdown-body a:hover {
+        color: var(--puma-hover-color);
+    }
+
+    /* 引用块 - Puma 风格 */
     .markdown-body blockquote {
         padding: 0.75rem 1.25rem;
-        border-left: 4px solid #3b82f6;
-        background: var(--bg-secondary);
+        border-left: 3px solid var(--puma-main-color);
+        background: var(--puma-background-gray-light);
         border-radius: 0 0.5rem 0.5rem 0;
         font-style: normal;
+        color: var(--puma-text-light);
     }
 
-    /* 表格优化 - 添加滚动条 */
+    /* 表格优化 */
     .markdown-body table {
         display: block;
         overflow-x: auto;
@@ -237,22 +240,28 @@
     .markdown-body table th,
     .markdown-body table td {
         padding: 0.5rem 1rem;
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--puma-border-color);
+    }
+
+    .markdown-body table th {
+        background: var(--puma-background-gray-light);
+        font-weight: 500;
     }
 
     /* 图片样式 */
     .markdown-body img {
-        border-radius: 0.75rem;
+        border-radius: 0.5rem;
         max-width: 100%;
         height: auto;
         cursor: zoom-in;
+        border: 1px solid var(--puma-border-color-light);
     }
 
-    /* 代码块优化 */
+    /* 代码块 - Puma 风格 */
     .markdown-body pre {
         position: relative;
         background: #0d1117 !important;
-        border-radius: 0.75rem !important;
+        border-radius: 0.5rem !important;
         padding: 1rem !important;
         margin: 1.25rem 0 !important;
         overflow-x: auto;
@@ -262,7 +271,7 @@
         background: transparent !important;
         padding: 0 !important;
         font-family: var(--font-mono);
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         line-height: 1.6;
         color: #e6edf3 !important;
     }
@@ -271,8 +280,9 @@
         font-family: var(--font-mono);
         font-size: 0.875em;
         padding: 0.2rem 0.4rem;
-        background: var(--bg-secondary);
-        border-radius: 0.375rem;
+        background: var(--puma-background-gray-light);
+        border-radius: 0.25rem;
+        color: var(--puma-text-color);
     }
 
     /* 代码块语言标识 */
@@ -317,60 +327,57 @@
     }
 
     .copy-code-btn.copied {
-        background: #238636;
+        background: var(--puma-main-color);
         color: white;
-        border-color: #238636;
+        border-color: var(--puma-main-color);
     }
 
     /* 暗黑模式适配 */
     body[data-theme="dark"] .markdown-body {
-        color-scheme: dark;
-        color: var(--text-primary) !important;
+        color: var(--puma-text-color) !important;
     }
 
     body[data-theme="dark"] .markdown-body h1,
     body[data-theme="dark"] .markdown-body h2,
     body[data-theme="dark"] .markdown-body h3,
-    body[data-theme="dark"] .markdown-body h4,
-    body[data-theme="dark"] .markdown-body h5,
-    body[data-theme="dark"] .markdown-body h6 {
-        color: var(--text-primary) !important;
+    body[data-theme="dark"] .markdown-body h4 {
+        color: var(--puma-text-color) !important;
+    }
+
+    body[data-theme="dark"] .markdown-body p {
+        color: var(--puma-text-light) !important;
     }
 
     body[data-theme="dark"] .markdown-body a {
-        color: #58a6ff !important;
+        color: var(--puma-main-color) !important;
     }
 
     body[data-theme="dark"] .markdown-body blockquote {
-        color: var(--text-secondary) !important;
-        background: var(--bg-secondary);
+        color: var(--puma-text-light) !important;
+        background: var(--puma-background-gray-light);
     }
 
-    body[data-theme="dark"] .markdown-body hr {
-        background-color: var(--border-color) !important;
-    }
-
-    /* 文章导航 */
+    /* 文章导航 - Puma 风格 */
     .article-navigation {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
         margin: 3rem 0 2rem;
         padding-top: 2rem;
-        border-top: 1px solid var(--border-color);
+        border-top: 2px solid var(--puma-border-color-light);
     }
 
     .nav-item {
         padding: 1rem 1.25rem;
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
-        border-radius: 0.75rem;
+        background: var(--puma-background-gray-light);
+        border: 1px solid var(--puma-border-color-light);
+        border-radius: 0.5rem;
         transition: all 0.2s ease;
     }
 
     .nav-item:hover {
-        background: var(--bg-hover);
-        border-color: var(--border-hover);
+        background: var(--puma-background-white);
+        border-color: var(--puma-main-color);
         transform: translateY(-2px);
     }
 
@@ -380,15 +387,15 @@
 
     .nav-label {
         display: block;
-        font-size: 0.7rem;
-        color: var(--text-tertiary);
+        font-size: 0.75rem;
+        color: var(--puma-text-gray);
         margin-bottom: 0.5rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
 
     .nav-title {
-        color: var(--text-primary);
+        color: var(--puma-text-color);
         text-decoration: none;
         font-weight: 500;
         font-size: 0.875rem;
@@ -396,23 +403,23 @@
     }
 
     .nav-title:hover {
-        color: var(--text-secondary);
+        color: var(--puma-main-color);
     }
 
-    /* 相关文章 */
+    /* 相关文章 - Puma 风格 */
     .related-articles {
         margin: 2rem 0;
         padding: 1.5rem;
-        background: var(--bg-secondary);
-        border-radius: 0.75rem;
-        border: 1px solid var(--border-color);
+        background: var(--puma-background-gray-light);
+        border-radius: 0.5rem;
+        border: 1px solid var(--puma-border-color-light);
     }
 
     .related-articles h3 {
         font-size: 1rem;
-        font-weight: 600;
+        font-weight: 500;
         margin-bottom: 1rem;
-        color: var(--text-primary);
+        color: var(--puma-text-color);
     }
 
     .related-list {
@@ -426,7 +433,7 @@
         justify-content: space-between;
         align-items: baseline;
         padding: 0.75rem 0;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--puma-border-color-light);
     }
 
     .related-list li:last-child {
@@ -434,7 +441,7 @@
     }
 
     .related-list a {
-        color: var(--text-primary);
+        color: var(--puma-text-color);
         text-decoration: none;
         font-size: 0.875rem;
         transition: color 0.2s ease;
@@ -442,48 +449,51 @@
     }
 
     .related-list a:hover {
-        color: var(--text-secondary);
+        color: var(--puma-main-color);
     }
 
     .related-date {
         font-family: var(--font-mono);
         font-size: 0.75rem;
-        color: var(--text-tertiary);
+        color: var(--puma-text-gray);
         margin-left: 1rem;
         flex-shrink: 0;
     }
 
-    /* 评论区 */
+    /* 评论区 - Puma 风格 */
     .comment-section {
         margin-top: 3rem;
         padding-top: 2rem;
-        border-top: 1px solid var(--border-color);
+        border-top: 2px solid var(--puma-border-color-light);
     }
 
     .comment-section h3 {
         font-size: 1rem;
-        font-weight: 600;
-        color: var(--text-primary);
+        font-weight: 500;
+        color: var(--puma-text-color);
         margin-bottom: 1.5rem;
+        text-align: center;
     }
 
-    /* 返回按钮 */
+    /* 返回按钮 - Puma 风格 */
     .back-link {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
         margin-bottom: 2rem;
         padding: 0.5rem 0.875rem;
-        color: var(--text-secondary);
+        color: var(--puma-text-light);
         text-decoration: none;
         font-size: 0.875rem;
         border-radius: 0.5rem;
+        border: 1px solid var(--puma-border-color-light);
         transition: all 0.2s ease;
     }
 
     .back-link:hover {
-        background: var(--bg-hover);
-        color: var(--text-primary);
+        background: var(--puma-background-gray-light);
+        color: var(--puma-main-color);
+        border-color: var(--puma-main-color);
     }
 
     /* Waline 样式适配 */

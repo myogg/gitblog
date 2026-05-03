@@ -1,146 +1,169 @@
 {% extends "base.html" %}
 
-{% block title %}关于 - &lt;/&gt;北方的博客{% endblock %}
+{% block title %}关于 - 姜小小{% endblock %}
 
 {% block description %}关于博客 - 记录技术见解、生活感悟和成长心得。{% endblock %}
 
-{% block keywords %}关于,xxjss,程序员,个人简介{% endblock %}
+{% block keywords %}关于,姜小小,程序员,个人简介{% endblock %}
 
 {% block head_extra %}
 <style>
-    .about-layout {
-        display: flex;
-        gap: 3rem;
-        margin: 2rem 0 4rem;
-        align-items: flex-start;
+    /* Puma 风格的关于页面 */
+    .about-content {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px 0;
     }
 
-    .about-left {
-        flex: 1;
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .about-section {
+        margin-bottom: 40px;
     }
 
-    .about-right {
-        flex: 1;
-        min-width: 0;
-        display: flex;
-        align-items: center;
-    }
-
-    .about-bio {
-        margin-bottom: 2rem;
-    }
-
-    .about-bio p {
+    .about-section p {
         line-height: 2;
-        color: var(--text-secondary);
-        font-size: 1.05rem;
-        margin-bottom: 1.25rem;
+        color: var(--puma-text-light);
+        font-size: 16px;
+        margin-bottom: 20px;
     }
 
-    .about-bio p:last-child {
+    .about-section p:last-child {
         margin-bottom: 0;
     }
 
     .about-divider {
-        width: 3rem;
+        width: 60px;
         height: 2px;
-        background: var(--border-hover);
-        margin: 2rem 0;
-        border-radius: 1px;
+        background: var(--puma-border-color);
+        margin: 30px 0;
     }
 
     .about-motto {
         font-style: italic;
-        color: var(--text-tertiary);
-        font-size: 0.95rem;
+        color: var(--puma-text-gray);
+        font-size: 15px;
         line-height: 1.8;
-        border-left: 3px solid var(--border-hover);
-        padding-left: 1rem;
+        border-left: 3px solid var(--puma-main-color);
+        padding-left: 20px;
+        margin: 30px 0;
     }
 
-    .about-image-wrapper {
-        border-radius: 0.75rem;
-        overflow: hidden;
-        border: 1px solid var(--border-color);
-        background-color: var(--bg-secondary);
-        transition: all 0.3s ease;
-        width: 100%;
+    .about-image {
+        text-align: center;
+        margin: 40px 0;
     }
 
-    .about-image-wrapper:hover {
-        border-color: var(--border-hover);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.12);
-    }
-
-    .about-image-wrapper img {
-        width: 100%;
+    .about-image img {
+        max-width: 100%;
         height: auto;
-        display: block;
-        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid var(--puma-border-color-light);
     }
 
     .links-section {
-        margin-top: 4rem;
-        padding-top: 3rem;
-        border-top: 1px solid var(--border-color);
+        margin-top: 60px;
+        padding-top: 40px;
+        border-top: 2px solid var(--puma-border-color-light);
     }
 
-    .section-label {
-        font-size: 1.25rem;
+    .section-title {
+        font-size: 20px;
         font-weight: 500;
-        margin-bottom: 2rem;
-        color: var(--text-primary);
+        margin-bottom: 30px;
+        color: var(--puma-text-color);
         text-align: center;
     }
 
-    .links-grid {
+    .nav-category {
+        margin-bottom: 36px;
+    }
+
+    .nav-category-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        padding-left: 12px;
+        border-left: 3px solid var(--puma-main-color);
+        color: var(--puma-text-color);
+    }
+
+    .nav-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
-        margin-top: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
     }
 
-    .link-card {
+    .nav-card {
+        background: var(--puma-background-gray-light);
+        border-radius: 12px;
+        padding: 20px;
         text-decoration: none;
-        padding: 1.25rem;
-        background: var(--bg-secondary);
-        border-radius: 0.75rem;
-        border: 1px solid var(--border-color);
-        transition: all 0.2s ease;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: all 0.25s ease;
+        border: 1px solid var(--puma-border-color-light);
     }
 
-    .link-card:hover {
-        background: var(--bg-hover);
-        border-color: var(--border-hover);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    .nav-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border-color: var(--puma-main-color);
+        color: inherit;
     }
 
-    .link-name {
-        font-weight: 500;
-        color: var(--text-primary);
-        font-size: 0.9375rem;
-        margin-bottom: 0.375rem;
+    .nav-card-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--puma-background-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        overflow: hidden;
     }
 
-    .link-desc {
-        color: var(--text-tertiary);
-        font-size: 0.8125rem;
+    .nav-card-icon img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-card-info {
+        min-width: 0;
+    }
+
+    .nav-card-name {
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--puma-text-color);
+    }
+
+    .nav-card-desc {
+        font-size: 12px;
+        color: var(--puma-text-gray);
+        margin-top: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     @media (max-width: 768px) {
-        .about-layout {
-            flex-direction: column;
-            gap: 2rem;
+        .about-content {
+            padding: 20px 0;
         }
 
-        .about-right {
-            display: none;
+        .nav-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .nav-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>
@@ -149,40 +172,89 @@
 {% block content %}
 <h1 class="page-heading">关于</h1>
 
-<div class="about-layout">
-    <div class="about-left">
-        <div class="about-bio">
-            <p>Over fifty, a manual laborer whose only passion is the internet.</p>
-            <p>I've wandered through forums, blogs, and open-source projects, repeatedly mocked with: <em>"We can't teach you, just watch."</em></p>
-            <p>Since AI came along, I no longer have to live by anyone else's approval. I tinker for myself, I live for myself, that's all!</p>
-        </div>
-        <div class="about-divider"></div>
-        <div class="about-motto">
-            Using my words to record my wild thoughts and fleeting moments of life, my crazy ideas and the actions they might inspire.
-        </div>
+<div class="about-content">
+    <div class="about-section">
+        <p>Over fifty, a manual laborer whose only passion is the internet.</p>
+        <p>I've wandered through forums, blogs, and open-source projects, repeatedly mocked with: <em>"We can't teach you, just watch."</em></p>
+        <p>Since AI came along, I no longer have to live by anyone else's approval. I tinker for myself, I live for myself, that's all!</p>
     </div>
-    <div class="about-right">
-        <div class="about-image-wrapper">
-            <img src="/static/assets/images/about.jpg" alt="About">
-        </div>
+
+    <div class="about-divider"></div>
+
+    <div class="about-motto">
+        Using my words to record my wild thoughts and fleeting moments of life, my crazy ideas and the actions they might inspire.
+    </div>
+
+    <div class="about-image">
+        <img src="/static/assets/images/about.jpg" alt="About" loading="lazy">
     </div>
 </div>
 
 <div class="links-section">
-    <h2 class="section-label">友情链接</h2>
-    <div class="links-grid">
-        {% set links = [
-            {'url': 'https://829259.xyz', 'name': '829259.xyz', 'desc': '做一个有意思的人'},
-            {'url': 'https://100412.xyz', 'name': '100412.xyz', 'desc': '利用Issues构建精彩博客'},
-            {'url': 'https://jreely.dpdns.org', 'name': 'jreely.dpdns.org', 'desc': '北方的博客'},
-            {'url': 'https://tel.qzz.io', 'name': 'tel.qzz.io', 'desc': '书签链接'},
-        ] %}
-        {% for link in links %}
-        <a href="{{ link.url }}" target="_blank" class="link-card">
-            <div class="link-name">{{ link.name }}</div>
-            <div class="link-desc">{{ link.desc }}</div>
-        </a>
-        {% endfor %}
+    <h2 class="section-title">导航</h2>
+
+    {% set nav_categories = [
+        {
+            'title': '我的站点',
+            'links': [
+                {'name': '134688', 'url': 'https://134688.xyz', 'desc': '个人站点'},
+                {'name': '100412', 'url': 'https://100412.xyz', 'desc': '个人站点'},
+                {'name': '829259', 'url': 'https://829259.xyz', 'desc': '个人站点'},
+            ]
+        },
+        {
+            'title': '云服务 & 域名',
+            'links': [
+                {'name': 'Cloudflare', 'url': 'https://cloudflare.com', 'desc': 'CDN & DNS'},
+                {'name': 'InfinityFree', 'url': 'https://infinityfree.com', 'desc': '免费托管'},
+                {'name': 'Serv00', 'url': 'https://serv00.com', 'desc': '免费VPS'},
+                {'name': 'Name.com', 'url': 'https://name.com', 'desc': '域名注册'},
+                {'name': 'DigitalPlat', 'url': 'https://digitalplat.org', 'desc': '数字平台'},
+            ]
+        },
+        {
+            'title': '技术社区',
+            'links': [
+                {'name': 'GitHub', 'url': 'https://github.com', 'desc': '代码托管'},
+                {'name': 'Linux.do', 'url': 'https://linux.do', 'desc': 'Linux社区'},
+                {'name': 'NodeSeek', 'url': 'https://nodeseek.com', 'desc': 'VPS交流'},
+            ]
+        },
+        {
+            'title': '社交 & 购物',
+            'links': [
+                {'name': 'Instagram', 'url': 'https://instagram.com', 'desc': '图片社交'},
+                {'name': 'Pinterest', 'url': 'https://pinterest.com', 'desc': '灵感收藏'},
+                {'name': 'Amazon', 'url': 'https://amazon.com', 'desc': '在线购物'},
+            ]
+        },
+        {
+            'title': '科技 & 工具',
+            'links': [
+                {'name': 'NVIDIA', 'url': 'https://nvidia.com', 'desc': 'GPU & AI'},
+                {'name': 'Superbed', 'url': 'https://superbed.cc', 'desc': '图床工具'},
+                {'name': 'Hidoha', 'url': 'https://hidoha.net', 'desc': '图床工具'},
+            ]
+        },
+    ] %}
+
+    {% for cat in nav_categories %}
+    <div class="nav-category">
+        <div class="nav-category-title">{{ cat.title }}</div>
+        <div class="nav-grid">
+            {% for link in cat.links %}
+            <a class="nav-card" href="{{ link.url }}" target="_blank" rel="noopener">
+                <div class="nav-card-icon">
+                    <img src="https://www.google.com/s2/favicons?domain={{ link.url | replace('https://', '') | replace('http://', '') | replace('/', '') }}&sz=64" alt="" loading="lazy">
+                </div>
+                <div class="nav-card-info">
+                    <div class="nav-card-name">{{ link.name }}</div>
+                    <div class="nav-card-desc">{{ link.desc }}</div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
