@@ -634,39 +634,10 @@ def main():
 
         index_template = env.get_template('base.html')
 
-        # 生成所有分页
-        for page_num in range(1, total_pages + 1):
-            start_idx = (page_num - 1) * articles_per_page
-            end_idx = min(start_idx + articles_per_page, total_articles)
-            page_articles = all_articles[start_idx:end_idx]
-
-            # 分页信息
-            pagination = {
-                'current_page': page_num,
-                'total_pages': total_pages,
-                'prev_page': f"page-{page_num - 1}.html" if page_num > 2 else ("index.html" if page_num == 2 else None),
-                'next_page': f"page-{page_num + 1}.html" if page_num < total_pages else None
-            }
-
-            # 渲染页面
-            page_html = index_template.render(
-                articles=page_articles,
-                pagination=pagination,
-                YEAR=datetime.now().year
-            )
-
-            # 写入文件
-            if page_num == 1:
-                filename = "index.html"
-            else:
-                filename = f"page-{page_num}.html"
-
-            with open(filename, "w", encoding="utf-8") as f:
-                f.write(page_html)
-
-            print(f"✓ 生成页面: {filename} ({len(page_articles)} 篇文章)")
-
-        print(f"✓ 主頁已生成 (共 {total_pages} 页)")
+        # 首页直接重定向到博客页
+        with open("index.html", "w", encoding="utf-8") as f:
+            f.write('<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=blog.html"></head><body></body></html>')
+        print("✓ 生成页面: index.html (重定向到博客页)")
     except Exception as e:
         print(f"❌ 生成主頁失敗: {e}")
 

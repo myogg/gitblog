@@ -196,6 +196,26 @@ p {
     }
 }
 
+/* 头部链接 */
+.header-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.header-links a {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.header-links a:hover {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
 /* 搜索框 */
 .search-form {
     padding-top: 12px;

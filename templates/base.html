@@ -62,6 +62,17 @@
                     <a href="{% if base_path %}{{base_path}}{% endif %}index.html">姜小小</a>
                 </h1>
                 <p class="site-description">记录技术、生活和思考</p>
+                <div class="header-links">
+                    <a href="mailto:xxjss@hotmail.com" title="Email">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                    <a href="https://github.com/myogg" target="_blank" title="GitHub">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://134688.xyz/feed.xml" target="_blank" title="RSS Feed">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+                    </a>
+                </div>
                 <form class="search-form" action="{% if base_path %}{{base_path}}{% endif %}search.html" method="get">
                     <input type="search" class="search-field" placeholder="搜索..." name="q">
                 </form>
@@ -87,113 +98,12 @@
         </header>
         <nav class="pNav">
             <a href="{% if base_path %}{{base_path}}{% endif %}index.html">Home</a>
-            <a href="{% if base_path %}{{base_path}}{% endif %}blog.html">Blog</a>
             <a href="{% if base_path %}{{base_path}}{% endif %}about.html">About</a>
-            <span class="pNav-sep">|</span>
-            <a href="mailto:xxjss@hotmail.com" title="Email">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </a>
-            <a href="https://github.com/myogg" target="_blank" title="GitHub">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-            <a href="https://134688.xyz/feed.xml" target="_blank" title="RSS Feed">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
-            </a>
         </nav>
 
 
         <main class="container">
             {% block content %}
-            {% if pagination and pagination.current_page == 1 %}
-            {# 首页 - Puma 风格文章列表 #}
-            <section class="pBlock--list">
-                {% if articles and articles|length > 0 %}
-                    {% for article in articles %}
-                    <article class="pBlock--item">
-                        <header class="pBlock--header">
-                            <h2 class="pBlock--title">
-                                <a href="articles/article-{{article.number}}.html">{{article.title}}</a>
-                            </h2>
-                            <div class="pBlock--postMetaWrap">
-                                <time>{{article.created_at.strftime('%Y年%m月%d日')}}</time>
-                            </div>
-                        </header>
-                        {% if article.summary %}
-                        <div class="pBlock--snippet">
-                            <p>{{article.summary}}</p>
-                        </div>
-                        {% endif %}
-                    </article>
-                    {% endfor %}
-                {% else %}
-                    <div class="pBlock--empty">暂无文章</div>
-                {% endif %}
-            </section>
-            {% else %}
-            {# 分页页面 #}
-            <h1 class="page-heading">博客</h1>
-            <div class="main-layout">
-                <div class="main-content">
-                    <section class="pBlock--list">
-                        {% if articles %}
-                            {% for article in articles %}
-                            <article class="pBlock--item">
-                                <header class="pBlock--header">
-                                    <h2 class="pBlock--title">
-                                        <a href="articles/article-{{article.number}}.html">{{article.title}}</a>
-                                    </h2>
-                                    <div class="pBlock--postMetaWrap">
-                                        <time>{{article.created_at.strftime('%Y年%m月%d日')}}</time>
-                                    </div>
-                                </header>
-                                {% if article.summary %}
-                                <div class="pBlock--snippet">
-                                    <p>{{article.summary}}</p>
-                                </div>
-                                {% endif %}
-                            </article>
-                            {% endfor %}
-                        {% else %}
-                            <div class="pBlock--empty">暂无文章</div>
-                        {% endif %}
-                    </section>
-
-                    {% if pagination %}
-                    <nav class="pagination">
-                        <div>
-                            {% if pagination.prev_page %}
-                            <a href="{{pagination.prev_page}}" class="page-link">&larr; 上一页</a>
-                            {% endif %}
-                        </div>
-                        <span class="page-info">第 {{pagination.current_page}} / {{pagination.total_pages}} 页</span>
-                        <div>
-                            {% if pagination.next_page %}
-                            <a href="{{pagination.next_page}}" class="page-link">下一页 &rarr;</a>
-                            {% endif %}
-                        </div>
-                    </nav>
-                    {% endif %}
-                </div>
-
-                <aside class="sidebar">
-                    <div class="subscribe-card">
-                        <div class="subscribe-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 11a9 9 0 0 1 9 9"></path>
-                                <path d="M4 4a16 16 0 0 1 16 16"></path>
-                                <circle cx="5" cy="19" r="1"></circle>
-                            </svg>
-                        </div>
-                        <h3 class="subscribe-title">订阅我的博客</h3>
-                        <p class="subscribe-description">可以通过 <strong>Feedly</strong>, <strong>Inoreader</strong> 或 <strong>RSS</strong> 订阅。RSS 地址：</p>
-                        <div class="subscribe-url-box">
-                            <input type="text" readonly value="https://134688.xyz/feed.xml" class="subscribe-url-input" id="rssUrl">
-                        </div>
-                        <button class="subscribe-button" onclick="copyRssUrl(event)">订阅</button>
-                    </div>
-                </aside>
-            </div>
-            {% endif %}
             {% endblock %}
         </main>
 
