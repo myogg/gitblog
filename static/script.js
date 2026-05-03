@@ -33,25 +33,6 @@ function initTheme() {
 }
 
 // ============================================
-// 下拉菜单功能
-// ============================================
-function initDropdown() {
-    const menuToggle = document.getElementById('menuToggle');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    
-    if (!menuToggle || !dropdownMenu) return;
-
-    menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdownMenu.classList.toggle('show');
-    });
-
-    document.addEventListener('click', () => {
-        dropdownMenu.classList.remove('show');
-    });
-}
-
-// ============================================
 // 滚动时 header 样式变化
 // ============================================
 function initHeaderScroll() {
@@ -120,7 +101,6 @@ window.copyRssUrl = function(event) {
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     initTheme();
-    initDropdown();
     initHeaderScroll();
     initBackToTop();
 });

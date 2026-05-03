@@ -197,26 +197,6 @@ p {
 }
 
 /* 搜索框 */
-.header-links {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.header-links a {
-    color: rgba(255, 255, 255, 0.85);
-    transition: color 0.3s ease, transform 0.2s ease;
-    display: flex;
-    align-items: center;
-}
-
-.header-links a:hover {
-    color: #fff;
-    transform: translateY(-1px);
-}
-
-/* 搜索框 */
 .search-form {
     padding-top: 12px;
     margin-bottom: 20px;
@@ -250,72 +230,6 @@ p {
     justify-content: center;
     gap: 12px;
     position: relative;
-}
-
-/* 下拉菜单 */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7px 12px;
-    background: rgba(0, 0, 0, 0.15);
-    border: 0;
-    border-radius: 5px;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 12px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.dropdown-toggle:hover {
-    background: rgba(0, 0, 0, 0.25);
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    min-width: 150px;
-    background: var(--puma-background-white);
-    border: 1px solid var(--puma-border-color);
-    border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.2s ease;
-    overflow: hidden;
-    z-index: 100;
-}
-
-.dropdown-menu.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 15px;
-    color: var(--puma-text-color);
-    text-decoration: none;
-    font-size: 13px;
-    transition: all 0.15s ease;
-    border-bottom: 1px solid var(--puma-border-color-light);
-}
-
-.dropdown-menu a:last-child {
-    border-bottom: none;
-}
-
-.dropdown-menu a:hover {
-    background: var(--puma-background-gray-light);
-    color: var(--puma-main-color);
-    padding-left: 20px;
 }
 
 /* 主题切换按钮 */
@@ -389,6 +303,12 @@ body[data-theme="dark"] .moon-icon {
 
 .pNav a:hover {
     color: var(--puma-main-color);
+}
+
+.pNav-sep {
+    color: var(--puma-border-color);
+    margin: 0 4px;
+    font-size: 13px;
 }
 
 /* 主内容区 */
