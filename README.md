@@ -76,6 +76,9 @@ My personal blog using issues and GitHub Actions
 
 </details>
 
+## 日记 (1篇文章)
+- [美，是异常数据](https://github.com/myogg/gitblog/issues/39)--2026-05-04
+
 ## 一些记录 (4篇文章)
 - [Copy Fail 曝光：Linux 本地漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)--2026-05-01
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
