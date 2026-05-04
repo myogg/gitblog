@@ -15,16 +15,17 @@ My personal blog using issues and GitHub Actions
 
 [RSS Feed](https://raw.githubusercontent.com/myogg/gitblog/master/feed.xml)
 
-## 正文 (21篇文章)
+## 正文 (22篇文章)
+- [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)--2026-05-04
 - [B 站开启纪录片开放周](https://github.com/myogg/gitblog/issues/34)--2026-05-01
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
 - [NVIDIA NIM 上线了 GLM-5.1 等大模型，免费开放 API 使用](https://github.com/myogg/gitblog/issues/30)--2026-04-19
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)--2026-04-17
-- [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)--2026-04-17
 
 <details>
-<summary>显示更多 (16篇)</summary>
+<summary>显示更多 (17篇)</summary>
 
+- [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)
 - [Perplexity 发布 Personal Computer 软件](https://github.com/myogg/gitblog/issues/22)
 - [iPhone 忠诚度升至 96.4% 创历史新高](https://github.com/myogg/gitblog/issues/21)
 - [DeepSeek 发布 DeepGEMM 重大更新：推出 Mega MoE 融合算子并支持 FP4 精度](https://github.com/myogg/gitblog/issues/19)
@@ -58,16 +59,17 @@ My personal blog using issues and GitHub Actions
 - [cloudflare 提供安全的私有网络——隆重推出 Cloudflare Mesh](https://github.com/myogg/gitblog/issues/17)--2026-04-16
 - [侠影](https://github.com/myogg/gitblog/issues/2)--2026-04-15
 
-## blog (8篇文章)
+## blog (9篇文章)
+- [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)--2026-05-04
 - [五一三天假](https://github.com/myogg/gitblog/issues/37)--2026-05-03
 - [永远不要为不能改变的事情难过](https://github.com/myogg/gitblog/issues/36)--2026-05-01
 - [童年与成长回忆—致七零后](https://github.com/myogg/gitblog/issues/33)--2026-04-28
 - [我头回过桥](https://github.com/myogg/gitblog/issues/32)--2026-04-25
-- [这小视频是不能看，看一场哭一场！](https://github.com/myogg/gitblog/issues/16)--2026-04-16
 
 <details>
-<summary>显示更多 (3篇)</summary>
+<summary>显示更多 (4篇)</summary>
 
+- [这小视频是不能看，看一场哭一场！](https://github.com/myogg/gitblog/issues/16)
 - [忘天忘地忘不了你](https://github.com/myogg/gitblog/issues/3)
 - [侠影](https://github.com/myogg/gitblog/issues/2)
 - [丁香花](https://github.com/myogg/gitblog/issues/1)
