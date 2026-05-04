@@ -166,18 +166,17 @@ p {
 }
 
 .site-logo {
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.97);
     text-decoration: none;
     display: inline-block;
-    margin-bottom: 8px;
-    margin-top: 16px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
     .site-logo {
-        font-size: 22px;
+        font-size: 28px;
     }
 }
 
@@ -186,14 +185,14 @@ p {
 }
 
 .site-description {
-    font-size: 14px;
+    font-size: 17px;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 12px;
 }
 
 @media screen and (max-width: 768px) {
     .site-description {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 
@@ -206,7 +205,8 @@ p {
     flex-wrap: nowrap;
 }
 
-.header-links a {
+.header-links a,
+.header-links button {
     color: rgba(255, 255, 255, 0.85);
     transition: color 0.3s ease, transform 0.2s ease;
     display: inline-flex;
@@ -214,25 +214,20 @@ p {
     flex-shrink: 0;
 }
 
-.header-links a:hover {
+.header-links a:hover,
+.header-links button:hover {
     color: #fff;
     transform: translateY(-1px);
 }
 
-body[data-theme="dark"] .header-links a {
+body[data-theme="dark"] .header-links a,
+body[data-theme="dark"] .header-links button {
     color: rgba(255, 255, 255, 0.85);
 }
 
-body[data-theme="dark"] .header-links a:hover {
+body[data-theme="dark"] .header-links a:hover,
+body[data-theme="dark"] .header-links button:hover {
     color: #fff;
-}
-
-/* 头部底部行：链接 + 暗黑模式同一行 */
-.header-bottom-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
 }
 
 /* 搜索框 */
@@ -458,13 +453,13 @@ body[data-theme="dark"] .moon-icon {
 
 .article-card {
     border-bottom: 2px solid var(--puma-border-color-light);
-    padding: 50px 0;
+    padding: 60px 0;
     transition: all 0.2s ease;
 }
 
 @media screen and (max-width: 768px) {
     .article-card {
-        padding: 30px 0;
+        padding: 36px 0;
     }
 }
 
@@ -494,37 +489,6 @@ body[data-theme="dark"] .moon-icon {
 
 .article-card-title a:hover {
     color: var(--puma-main-color);
-}
-
-.article-card-summary {
-    color: var(--puma-text-light);
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 12px;
-    text-align: left;
-    background: var(--puma-background-gray-light);
-    border-left: 3px solid var(--puma-main-color);
-    border-radius: 0 6px 6px 0;
-    padding: 10px 14px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.article-card-summary p {
-    margin-bottom: 8px;
-}
-
-.article-card-summary p:last-child {
-    margin-bottom: 0;
-}
-
-@media screen and (max-width: 768px) {
-    .article-card-summary {
-        font-size: 15px;
-        margin-bottom: 14px;
-    }
 }
 
 .article-card-date {

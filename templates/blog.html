@@ -15,9 +15,6 @@
                     <a href="articles/article-{{article.number}}.html">{{article.title}}</a>
                 </h2>
                 <time class="article-card-date">{{article.created_at.strftime('%b %d %Y')}}</time>
-                {% if article.summary %}
-                <div class="article-card-summary">{{article.summary|replace('\n\n', '</p><p>')|replace('\n', '<br>')|safe}}</div>
-                {% endif %}
             </article>
             {% endfor %}
         </div>
@@ -32,9 +29,6 @@
                         <a href="articles/article-{{article.number}}.html">{{article.title}}</a>
                     </h2>
                     <time class="article-card-date">{{article.created_at.strftime('%b %d %Y')}}</time>
-                    {% if article.summary %}
-                    <div class="article-card-summary">{{article.summary|replace('\n\n', '</p><p>')|replace('\n', '<br>')|safe}}</div>
-                    {% endif %}
                 </article>
                 {% endfor %}
             </div>
