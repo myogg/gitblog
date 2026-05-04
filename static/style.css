@@ -1,6 +1,6 @@
 /* Puma 主题风格 - 融合现代设计 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
     --puma-main-color: #27ae60;
@@ -21,7 +21,7 @@
     --puma-content-width: 900px;
     --puma-border-radius: 10px;
 
-    --font-sans: 'Inter', 'Open Sans', PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti, WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;
+    --font-sans: 'Noto Sans SC', 'Inter', 'Open Sans', PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti, WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;
     --font-mono: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
 }
 
@@ -172,6 +172,7 @@ p {
     text-decoration: none;
     display: inline-block;
     margin-bottom: 8px;
+    margin-top: 16px;
 }
 
 @media screen and (max-width: 768px) {
@@ -202,7 +203,6 @@ p {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
     flex-wrap: nowrap;
 }
 
@@ -225,6 +225,14 @@ body[data-theme="dark"] .header-links a {
 
 body[data-theme="dark"] .header-links a:hover {
     color: #fff;
+}
+
+/* 头部底部行：链接 + 暗黑模式同一行 */
+.header-bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
 }
 
 /* 搜索框 */
@@ -252,15 +260,6 @@ body[data-theme="dark"] .header-links a:hover {
 
 .search-field::placeholder {
     color: rgba(255, 255, 255, 0.8);
-}
-
-/* 头部图标和按钮 */
-.header-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    position: relative;
 }
 
 /* 主题切换按钮 */
@@ -459,13 +458,13 @@ body[data-theme="dark"] .moon-icon {
 
 .article-card {
     border-bottom: 2px solid var(--puma-border-color-light);
-    padding: 40px 0;
+    padding: 50px 0;
     transition: all 0.2s ease;
 }
 
 @media screen and (max-width: 768px) {
     .article-card {
-        padding: 20px 0;
+        padding: 30px 0;
     }
 }
 
@@ -477,13 +476,14 @@ body[data-theme="dark"] .moon-icon {
     font-size: 24px;
     font-weight: 400;
     line-height: 1.4;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: center;
 }
 
 @media screen and (max-width: 768px) {
     .article-card-title {
-        font-size: 20px;
+        font-size: 22px;
+        margin-bottom: 14px;
     }
 }
 
@@ -500,8 +500,16 @@ body[data-theme="dark"] .moon-icon {
     color: var(--puma-text-light);
     font-size: 16px;
     line-height: 1.8;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: left;
+    background: var(--puma-background-gray-light);
+    border-left: 3px solid var(--puma-main-color);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .article-card-summary p {
@@ -514,7 +522,8 @@ body[data-theme="dark"] .moon-icon {
 
 @media screen and (max-width: 768px) {
     .article-card-summary {
-        font-size: 12px;
+        font-size: 15px;
+        margin-bottom: 14px;
     }
 }
 
@@ -523,11 +532,12 @@ body[data-theme="dark"] .moon-icon {
     font-size: 14px;
     color: var(--puma-text-light);
     text-align: center;
+    margin-bottom: 12px;
 }
 
 @media screen and (max-width: 768px) {
     .article-card-date {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 
