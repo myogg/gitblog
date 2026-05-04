@@ -111,6 +111,37 @@ def extract_summary(body):
     # 检查是否有手动摘要分隔符
     if "<!-- more -->" in body:
         summary = body.split("<!-- more -->")[0].strip()
+        if not summary:
+            return None
+        # 去除 Markdown 特殊字符（保留纯文本和空行结构）
+        # 移除图片语法 ![alt](url)
+        summary = re.sub(r'!\[.*?\]\(.*?\)', '', summary)
+        # 移除链接语法 [text](url)，保留文字
+        summary = re.sub(r'\[([^\]]*)\]\(.*?\)', r'\1', summary)
+        # 移除加粗 **text** 或 __text__
+        summary = re.sub(r'(\*\*|__)(.*?)\1', r'\2', summary)
+        # 移除斜体 *text* 或 _text_
+        summary = re.sub(r'(\*|_)(.*?)\1', r'\2', summary)
+        # 移除行内代码 `code`
+        summary = re.sub(r'`([^`]+)`', r'\1', summary)
+        # 移除标题标记 # ## ### 等
+        summary = re.sub(r'^#{1,6}\s+', '', summary, flags=re.MULTILINE)
+        # 移除删除线 ~~text~~
+        summary = re.sub(r'~~(.*?)~~', r'\1', summary)
+        # 移除 HTML 标签
+        summary = re.sub(r'<[^>]+>', '', summary)
+        # 移除 <!-- more --> 残留
+        summary = summary.replace('<!-- more -->', '')
+        # 将连续空行（两个及以上换行）保留为段落分隔标记
+        # 先将 \r\n 统一为 \n
+        summary = summary.replace('\r\n', '\n')
+        # 去除每行首尾空白
+        lines = summary.split('\n')
+        lines = [line.strip() for line in lines]
+        # 重新组合，保留空行
+        summary = '\n'.join(lines)
+        # 去除首尾空白
+        summary = summary.strip()
         return summary if summary else None
 
     # 没有分隔符则不显示摘要

@@ -688,7 +688,7 @@
             <h1 class="article-title-text">{{issue.title}}</h1>
 
             <div class="article-meta">
-                <time class="post-date">{{issue.created_at.strftime('%Y年%m月%d日')}}</time>
+                <time class="post-date">{{issue.created_at.strftime('%b %d %Y')}}</time>
                 <span class="read-time" id="readTime"></span>
             </div>
 
@@ -768,7 +768,7 @@
             {% for article in related_articles %}
             <li>
                 <a href="article-{{article.number}}.html">{{article.title}}</a>
-                <span class="related-date">{{article.created_at.strftime('%Y-%m-%d')}}</span>
+                <span class="related-date">{{article.created_at.strftime('%b %d %Y')}}</span>
             </li>
             {% endfor %}
         </ul>

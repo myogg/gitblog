@@ -127,7 +127,7 @@
 <ul class="tag-articles-list">
     {% for article in articles %}
     <li class="article-item">
-        <time class="article-date">{{article.created_at.strftime('%Y-%m-%d')}}</time>
+        <time class="article-date">{{article.created_at.strftime('%b %d %Y')}}</time>
         <a href="../articles/article-{{article.number}}.html" class="article-title">{{article.title}}</a>
     </li>
     {% endfor %}

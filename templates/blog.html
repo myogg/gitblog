@@ -5,7 +5,6 @@
 {% block keywords %}博客,技术博客,编程,AI,个人成长,文章列表{% endblock %}
 
 {% block content %}
-<h1 class="page-heading">博客</h1>
 <div class="main-content">
     <div class="articles-container">
         {% if articles %}
@@ -16,9 +15,9 @@
                     <a href="articles/article-{{article.number}}.html">{{article.title}}</a>
                 </h2>
                 {% if article.summary %}
-                <p class="article-card-summary">{{article.summary}}</p>
+                <div class="article-card-summary">{{article.summary|replace('\n\n', '</p><p>')|replace('\n', '<br>')|safe}}</div>
                 {% endif %}
-                <time class="article-card-date">{{article.created_at.strftime('%Y年%m月%d日')}}</time>
+                <time class="article-card-date">{{article.created_at.strftime('%b %d %Y')}}</time>
             </article>
             {% endfor %}
         </div>
@@ -33,9 +32,9 @@
                         <a href="articles/article-{{article.number}}.html">{{article.title}}</a>
                     </h2>
                     {% if article.summary %}
-                    <p class="article-card-summary">{{article.summary}}</p>
+                    <div class="article-card-summary">{{article.summary|replace('\n\n', '</p><p>')|replace('\n', '<br>')|safe}}</div>
                     {% endif %}
-                    <time class="article-card-date">{{article.created_at.strftime('%Y年%m月%d日')}}</time>
+                    <time class="article-card-date">{{article.created_at.strftime('%b %d %Y')}}</time>
                 </article>
                 {% endfor %}
             </div>

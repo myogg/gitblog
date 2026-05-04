@@ -176,7 +176,7 @@ p {
 
 @media screen and (max-width: 768px) {
     .site-logo {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
@@ -192,7 +192,7 @@ p {
 
 @media screen and (max-width: 768px) {
     .site-description {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
@@ -200,20 +200,31 @@ p {
 .header-links {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
     margin-bottom: 12px;
+    flex-wrap: nowrap;
 }
 
 .header-links a {
     color: rgba(255, 255, 255, 0.85);
     transition: color 0.3s ease, transform 0.2s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .header-links a:hover {
     color: #fff;
     transform: translateY(-1px);
+}
+
+body[data-theme="dark"] .header-links a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="dark"] .header-links a:hover {
+    color: #fff;
 }
 
 /* 搜索框 */
@@ -472,7 +483,7 @@ body[data-theme="dark"] .moon-icon {
 
 @media screen and (max-width: 768px) {
     .article-card-title {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 
@@ -490,12 +501,20 @@ body[data-theme="dark"] .moon-icon {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
+}
+
+.article-card-summary p {
+    margin-bottom: 8px;
+}
+
+.article-card-summary p:last-child {
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
     .article-card-summary {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -508,7 +527,7 @@ body[data-theme="dark"] .moon-icon {
 
 @media screen and (max-width: 768px) {
     .article-card-date {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
