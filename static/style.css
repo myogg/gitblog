@@ -468,7 +468,7 @@ body[data-theme="dark"] .moon-icon {
 }
 
 .article-card-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 1.4;
     margin-bottom: 16px;
@@ -477,7 +477,7 @@ body[data-theme="dark"] .moon-icon {
 
 @media screen and (max-width: 768px) {
     .article-card-title {
-        font-size: 21px;
+        font-size: 20px;
         margin-bottom: 16px;
     }
 }
@@ -497,11 +497,13 @@ body[data-theme="dark"] .moon-icon {
     color: var(--puma-text-light);
     text-align: center;
     margin-bottom: 12px;
+    word-spacing: 8px;
 }
 
 @media screen and (max-width: 768px) {
     .article-card-date {
         font-size: 13px;
+        word-spacing: 6px;
     }
 }
 
