@@ -21,6 +21,16 @@
     --puma-content-width: 900px;
     --puma-border-radius: 10px;
 
+    /* 语义化变量（供标签页/搜索页等使用） */
+    --bg-primary: var(--puma-background-white);
+    --bg-secondary: var(--puma-background-gray-light);
+    --bg-hover: var(--puma-background-gray);
+    --border-color: var(--puma-border-color);
+    --border-hover: var(--puma-border-color-light);
+    --text-primary: var(--puma-text-color);
+    --text-secondary: var(--puma-text-light);
+    --text-tertiary: var(--puma-text-gray);
+
     --font-sans: 'Noto Sans SC', 'Inter', 'Open Sans', PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti, WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;
     --font-mono: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
 }
@@ -182,6 +192,15 @@ p {
 
 .site-logo:hover {
     color: var(--puma-hover-color);
+}
+
+/* 滚动后 header 变化 */
+.site-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.site-header.scrolled:before {
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 .site-description {
@@ -406,7 +425,7 @@ body[data-theme="dark"] .moon-icon {
 
 @media screen and (max-width: 768px) {
     .pBlock--postMetaWrap {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
@@ -442,6 +461,34 @@ body[data-theme="dark"] .moon-icon {
 /* 首页布局 */
 .homepage-layout {
     padding: 0;
+}
+
+/* 年份分组 */
+.year-section {
+    margin-bottom: 1rem;
+}
+
+.year-section:last-child {
+    margin-bottom: 0;
+}
+
+.year-label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--puma-text-gray);
+    text-align: center;
+    padding: 0.5rem 0 0.25rem;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+
+.year-label::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--puma-border-color-light);
+    margin: 0.5rem auto 0;
 }
 
 /* 文章卡片 */
@@ -690,6 +737,43 @@ body[data-theme="dark"] .moon-icon {
         right: 20px;
         width: 40px;
         height: 40px;
+    }
+
+    /* 触控目标优化 */
+    .header-links a,
+    .header-links button {
+        padding: 6px;
+        min-width: 44px;
+        min-height: 44px;
+        justify-content: center;
+    }
+
+    .header-links {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .theme-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .pNav a {
+        padding: 0 12px;
+        line-height: 44px;
+    }
+
+    .pNav {
+        line-height: 44px;
+    }
+
+    .page-link {
+        padding: 12px 20px;
+    }
+
+    .search-field {
+        max-width: 200px;
+        width: 70%;
     }
 }
 
