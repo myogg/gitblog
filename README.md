@@ -15,16 +15,17 @@ My personal blog using issues and GitHub Actions
 
 [RSS Feed](https://raw.githubusercontent.com/myogg/gitblog/master/feed.xml)
 
-## 正文 (22篇文章)
+## 正文 (23篇文章)
+- [诸葛亮临终预言，不杀亡国之臣，早知蜀汉宿](https://github.com/myogg/gitblog/issues/41)--2026-05-05
 - [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)--2026-05-04
 - [B 站开启纪录片开放周](https://github.com/myogg/gitblog/issues/34)--2026-05-01
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
 - [NVIDIA NIM 上线了 GLM-5.1 等大模型，免费开放 API 使用](https://github.com/myogg/gitblog/issues/30)--2026-04-19
-- [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)--2026-04-17
 
 <details>
-<summary>显示更多 (17篇)</summary>
+<summary>显示更多 (18篇)</summary>
 
+- [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)
 - [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)
 - [Perplexity 发布 Personal Computer 软件](https://github.com/myogg/gitblog/issues/22)
 - [iPhone 忠诚度升至 96.4% 创历史新高](https://github.com/myogg/gitblog/issues/21)
