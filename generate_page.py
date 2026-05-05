@@ -663,12 +663,8 @@ def main():
         total_articles = len(all_articles)
         total_pages = (total_articles + articles_per_page - 1) // articles_per_page
 
-        index_template = env.get_template('base.html')
-
-        # 首页直接重定向到博客页
-        with open("index.html", "w", encoding="utf-8") as f:
-            f.write('<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=blog.html"></head><body></body></html>')
-        print("✓ 生成页面: index.html (重定向到博客页)")
+        # 首页直接输出博客内容（SEO 友好）
+        print("✓ 首页将直接输出博客内容 (不再使用重定向)")
     except Exception as e:
         print(f"❌ 生成主頁失敗: {e}")
 
@@ -715,8 +711,10 @@ def main():
                     articles_by_year=articles_by_year
                 )
 
-                # 写入文件
+                # 第一页同时写入 index.html 和 blog.html
                 if page_num == 1:
+                    with open("index.html", "w", encoding="utf-8") as f:
+                        f.write(page_html)
                     filename = "blog.html"
                 else:
                     filename = f"blog-page-{page_num}.html"
@@ -725,6 +723,8 @@ def main():
                     f.write(page_html)
 
                 print(f"✓ 生成博客页面: {filename} ({len(page_articles)} 篇文章)")
+                if page_num == 1:
+                    print(f"✓ 生成页面: index.html (首页直接输出博客内容)")
 
             print(f"✓ 博客頁已生成 (共 {total_pages} 页)")
     except Exception as e:
@@ -771,17 +771,29 @@ def main():
     print("複製靜態資源...")
     os.makedirs("static", exist_ok=True)
 
-    static_files = ["style.css"]
+    static_files = ["style.css", "fonts.css"]
     for f in static_files:
-        src = os.path.join("templates", f)
+        src = os.path.join("static", f)
         if os.path.exists(src):
-            try:
-                shutil.copy(src, f"static/{f}")
-                print(f"✓ 複製靜態文件: {f}")
-            except Exception as e:
-                print(f"⚠️ 複製 {f} 失敗: {e}")
+            print(f"  ✓ {f} 已在 static/ 目錄中")
         else:
-            print(f"⏭️ 跳過 {f} (文件不存在)")
+            alt_src = os.path.join("templates", f)
+            if os.path.exists(alt_src):
+                try:
+                    shutil.copy(alt_src, f"static/{f}")
+                    print(f"✓ 複製靜態文件: {f}")
+                except Exception as e:
+                    print(f"⚠️ 複製 {f} 失敗: {e}")
+            else:
+                print(f"⏭️ 跳過 {f} (文件不存在)")
+
+    # 確保字體文件存在
+    fonts_dir = os.path.join("static", "fonts")
+    if os.path.exists(fonts_dir):
+        font_count = len([f for f in os.listdir(fonts_dir) if f.endswith('.woff2')])
+        print(f"  ✓ 字體文件: {font_count} 個 woff2 文件")
+    else:
+        print(f"  ⚠️ 字體目錄不存在: {fonts_dir}")
 
     print("\n🎉 任務完成！")
     print(f"已生成 {len(issues)} 篇文章")

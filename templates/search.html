@@ -165,15 +165,17 @@
             const snippet = getSnippet(result.content, query);
             const highlightedTitle = highlightText(result.title, query);
             const highlightedSnippet = highlightText(snippet, query);
+            const safeUrl = escapeHtml(result.url);
+            const safeDate = escapeHtml(result.date);
 
             html += `
                 <div class="search-result">
                     <div class="search-result-title">
-                        <a href="${result.url}">${highlightedTitle}</a>
+                        <a href="${safeUrl}">${highlightedTitle}</a>
                     </div>
                     <div class="search-result-snippet">${highlightedSnippet}</div>
                     <div class="search-result-meta">
-                        ${result.date}${result.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        ${safeDate}${result.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
                     </div>
                 </div>
             `;
@@ -196,10 +198,18 @@
         return snippet;
     }
 
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
     function highlightText(text, query) {
-        if (!query) return text;
-        const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
-        return text.replace(regex, '<span class="highlight">$1</span>');
+        if (!query) return escapeHtml(text);
+        const escapedText = escapeHtml(text);
+        const escapedQuery = escapeRegex(escapeHtml(query));
+        const regex = new RegExp(`(${escapedQuery})`, 'gi');
+        return escapedText.replace(regex, '<span class="highlight">$1</span>');
     }
 
     function escapeRegex(str) {
