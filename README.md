@@ -76,7 +76,8 @@ My personal blog using issues and GitHub Actions
 
 </details>
 
-## 日记 (1篇文章)
+## 日记 (2篇文章)
+- [日子就是这样熬的](https://github.com/myogg/gitblog/issues/40)--2026-05-05
 - [美，是异常数据](https://github.com/myogg/gitblog/issues/39)--2026-05-04
 
 ## 一些记录 (4篇文章)
