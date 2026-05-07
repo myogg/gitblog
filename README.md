@@ -15,16 +15,17 @@ My personal blog using issues and GitHub Actions
 
 [RSS Feed](https://raw.githubusercontent.com/myogg/gitblog/master/feed.xml)
 
-## 正文 (24篇文章)
+## 正文 (25篇文章)
+- [南宋江淮山寨义民抗金](https://github.com/myogg/gitblog/issues/44)--2026-05-07
 - [坞堡遗民，乱世守土](https://github.com/myogg/gitblog/issues/42)--2026-05-07
 - [诸葛亮临终预言，不杀亡国之臣，早知蜀汉宿](https://github.com/myogg/gitblog/issues/41)--2026-05-05
 - [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)--2026-05-04
 - [B 站开启纪录片开放周](https://github.com/myogg/gitblog/issues/34)--2026-05-01
-- [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
 
 <details>
-<summary>显示更多 (19篇)</summary>
+<summary>显示更多 (20篇)</summary>
 
+- [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)
 - [NVIDIA NIM 上线了 GLM-5.1 等大模型，免费开放 API 使用](https://github.com/myogg/gitblog/issues/30)
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)
 - [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)
@@ -83,7 +84,8 @@ My personal blog using issues and GitHub Actions
 - [日子就是这样熬的](https://github.com/myogg/gitblog/issues/40)--2026-05-05
 - [美，是异常数据](https://github.com/myogg/gitblog/issues/39)--2026-05-04
 
-## 一些记录 (4篇文章)
+## 一些记录 (5篇文章)
+- [小米开源 OmniVoice](https://github.com/myogg/gitblog/issues/45)--2026-05-07
 - [Copy Fail 曝光：Linux 本地漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)--2026-05-01
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)--2026-04-17
