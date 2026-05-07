@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Edge TTS 生成脚本
+TTS 生成脚本（基于 read-aloud API）
 - 从 GitHub Issues 获取文章内容
-- 使用 edge-tts 生成中文女声 MP3
+- 通过 read-aloud 服务生成中文女声 MP3
 - 上传到 Cloudflare R2（或本地模式存到 static/tts/）
 - 输出 tts_cache.json 供 generate_page.py 使用
 
@@ -16,16 +16,20 @@ import os
 import re
 import sys
 import json
-import asyncio
+import time
 import argparse
 import tempfile
 from datetime import datetime
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 # --- 配置 ---
 GITHUB_TOKEN = os.getenv("G_TT")
 REPO_NAME = "myogg/gitblog"
 VOICE = "zh-CN-XiaoxiaoNeural"
 MAX_CHARS = 5000
+TTS_API_URL = os.getenv("TTS_API_URL", "https://tts.134688.xyz/api/synthesis")
+TTS_API_TOKEN = os.getenv("TTS_API_TOKEN", "")
 R2_ACCOUNT_ID = os.getenv("R2_ACCOUNT_ID")
 R2_ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID")
 R2_SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY")
@@ -182,21 +186,38 @@ def save_local(file_path, issue_number):
     return url
 
 
-async def generate_tts(text, output_path, voice=VOICE, max_retries=3):
-    """使用 edge-tts 生成音频，带重试逻辑"""
-    import edge_tts
+def generate_tts(text, output_path, voice=VOICE, max_retries=3):
+    """通过 read-aloud API 生成音频，带重试逻辑"""
+    params = {
+        "text": text,
+        "voice": voice,
+    }
+    if TTS_API_TOKEN:
+        params["token"] = TTS_API_TOKEN
+
+    url = f"{TTS_API_URL}?{urlencode(params)}"
 
     for attempt in range(1, max_retries + 1):
         try:
-            communicate = edge_tts.Communicate(text, voice)
-            await communicate.save(output_path)
+            req = Request(url)
+            req.add_header("User-Agent", "gitblog-tts/1.0")
+            with urlopen(req, timeout=60) as resp:
+                if resp.status != 200:
+                    raise Exception(f"API 返回状态码 {resp.status}")
+                audio_data = resp.read()
+
+            if len(audio_data) < 100:
+                raise Exception(f"音频数据过小 ({len(audio_data)} bytes)，可能生成失败")
+
+            with open(output_path, "wb") as f:
+                f.write(audio_data)
             return
         except Exception as e:
             if attempt < max_retries:
                 wait = attempt * 5
                 print(f"  ⚠️ 第 {attempt} 次尝试失败: {e}")
                 print(f"  🔄 等待 {wait}s 后重试...")
-                await asyncio.sleep(wait)
+                time.sleep(wait)
             else:
                 raise
 
@@ -219,7 +240,7 @@ def save_cache(cache):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Edge TTS 生成脚本")
+    parser = argparse.ArgumentParser(description="TTS 生成脚本（read-aloud API）")
     parser.add_argument("--local", action="store_true", help="本地模式，音频存到 static/tts/ 而非 R2")
     parser.add_argument("--issue", type=int, help="只处理指定 issue 编号")
     parser.add_argument("--regenerate", action="store_true", help="强制重新生成，即使音频已存在")
@@ -229,7 +250,8 @@ def main():
     target_issue = args.issue
 
     print("=" * 50)
-    print(f"Edge TTS 生成脚本 ({'本地模式' if local_mode else 'R2 模式'})")
+    print(f"TTS 生成脚本 ({'本地模式' if local_mode else 'R2 模式'})")
+    print(f"API: {TTS_API_URL}")
     print("=" * 50)
 
     # 检查 GitHub Token
@@ -238,6 +260,11 @@ def main():
         print("  设置方式: set G_TT=你的token (Windows) 或 export G_TT=你的token (Linux/Mac)")
         save_cache({})
         return
+
+    # 检查 TTS API Token
+    if not TTS_API_TOKEN:
+        print("⚠️ 未设置 TTS_API_TOKEN，API 可能拒绝访问")
+        print("  设置方式: set TTS_API_TOKEN=你的token")
 
     # R2 模式检查环境变量
     if not local_mode:
@@ -324,7 +351,7 @@ def main():
                 tmp_path = tmp.name
 
             print(f"  🎙️ 生成音频 (voice={VOICE}, {len(text)} 字)...")
-            asyncio.run(generate_tts(text, tmp_path))
+            generate_tts(text, tmp_path)
 
             # 存储音频
             if local_mode:
