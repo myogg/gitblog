@@ -117,7 +117,9 @@ jobs:
           R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
         run: |
           echo "🎙️ 开始生成 TTS 音频..."
-          python tts_generate.py || echo "⚠️ TTS 生成失败，继续构建站点"
+          python tts_generate.py
+          # 即使 TTS 部分失败也会生成 tts_cache.json（包含已有缓存），
+          # 所以不中断构建，但缺失的文章将没有播放器
 
       - name: Generate HTML page
         env:

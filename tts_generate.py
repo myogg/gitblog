@@ -122,14 +122,6 @@ def clean_text_for_tts(body):
         text = text[:MAX_CHARS] + "..."
 
     return text
-    text = re.sub(r'\n{3,}', '\n\n', text)
-    text = text.strip()
-
-    # 截取长度限制
-    if len(text) > MAX_CHARS:
-        text = text[:MAX_CHARS] + "..."
-
-    return text
 
 
 def get_r2_client():
@@ -190,12 +182,23 @@ def save_local(file_path, issue_number):
     return url
 
 
-async def generate_tts(text, output_path, voice=VOICE):
-    """使用 edge-tts 生成音频"""
+async def generate_tts(text, output_path, voice=VOICE, max_retries=3):
+    """使用 edge-tts 生成音频，带重试逻辑"""
     import edge_tts
 
-    communicate = edge_tts.Communicate(text, voice)
-    await communicate.save(output_path)
+    for attempt in range(1, max_retries + 1):
+        try:
+            communicate = edge_tts.Communicate(text, voice)
+            await communicate.save(output_path)
+            return
+        except Exception as e:
+            if attempt < max_retries:
+                wait = attempt * 5
+                print(f"  ⚠️ 第 {attempt} 次尝试失败: {e}")
+                print(f"  🔄 等待 {wait}s 后重试...")
+                await asyncio.sleep(wait)
+            else:
+                raise
 
 
 def load_cache():
