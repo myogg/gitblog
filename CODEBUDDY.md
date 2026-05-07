@@ -28,6 +28,7 @@ python main.py <github_token> <repo_name> [--issue_number NUMBER]
 python tts_generate.py              # R2 mode (default)
 python tts_generate.py --local      # Local file mode
 python tts_generate.py --issue 30   # Single issue
+python tts_generate.py --regenerate # Force regenerate even if audio exists
 
 # Clear stale API cache (6-hour TTL)
 del github_cache.json
@@ -42,7 +43,6 @@ del github_cache.json
 | `TTS_API_URL` | `tts_generate.py` | Read-aloud TTS API endpoint (default: `https://tts.134688.xyz/api/synthesis`) |
 | `TTS_API_TOKEN` | `tts_generate.py` | Read-aloud API authentication token |
 | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_PUBLIC_URL` | `tts_generate.py` | Cloudflare R2 storage for TTS audio |
-| `GISCUS_REPO_ID`, `GISCUS_CATEGORY_ID` | `generate_page.py` | Giscus config (currently unused; Waline is active) |
 
 ## Architecture
 
@@ -66,8 +66,8 @@ GitHub Issues (content source, labels = categories)
 ### Key Scripts (all at repo root)
 
 - **`main.py`** — Reads issues, generates categorized `README.md` (the repo landing page), `feed.xml` RSS feed, and `BACKUP/*.md` backups. Ignores labels "Friends" and "TODO". Collapses sections with >5 articles.
-- **`generate_page.py`** — Full static site generator. Fetches issues via GitHub API with 6-hour JSON cache (`github_cache.json`). Parses `<!-- more -->` for summaries, YAML/simple `tags:` for content tags. Builds paginated blog (20/page), article pages with prev/next + related articles, tag pages, search index, sitemap. Uses Jinja2 templates.
-- **`tts_generate.py`** — TTS via read-aloud API (self-hosted at `tts.134688.xyz`) with `zh-CN-XiaoxiaoNeural` voice (5000 char limit). 3x retry with backoff. Uploads to Cloudflare R2 via boto3 or saves locally. Outputs `tts_cache.json`.
+- **`generate_page.py`** — Full static site generator. Fetches issues via GitHub API with 6-hour JSON cache (`github_cache.json`). Parses `<!-- more -->` for summaries, YAML/simple `tags:` for content tags. Builds paginated blog (20/page), article pages with prev/next + related articles, tag pages, search index, sitemap. Uses Jinja2 templates. First blog page is written as both `index.html` (SEO-friendly) and `blog.html`.
+- **`tts_generate.py`** — TTS via read-aloud API (self-hosted at `tts.134688.xyz`) with `zh-CN-XiaoxiaoNeural` voice (5000 char limit). Uses `urllib` (no edge-tts dependency). 3x retry with backoff. Uploads to Cloudflare R2 via boto3 or saves locally. Outputs `tts_cache.json`. API auth via `token` query parameter.
 - **`generate_preview.py`** — Local preview with mock data, no API needed.
 
 ### Templates (`templates/`)
@@ -85,7 +85,8 @@ All extend `base.html`. Use `base_path` variable for relative path resolution (`
 
 ### Static Assets (`static/`)
 
-- `style.css` — "Puma" theme, CSS custom properties (`--puma-*`), dark mode via `data-theme="dark"`, accent `#27ae60`, 900px max-width, 768px/480px breakpoints. Primary font: Noto Sans SC (思源黑体).
+- `style.css` — "Puma" theme, CSS custom properties (`--puma-*`), dark mode via `data-theme="dark"`, accent `#27ae60`, 900px max-width, 768px/480px breakpoints. Primary font: Noto Sans SC (思源黑体), self-hosted woff2 in `static/fonts/`.
+- `fonts.css` — `@font-face` declarations for Inter and JetBrains Mono
 - `script.js` — Theme toggle, header scroll, back-to-top, RSS URL copy
 - `assets/images/` — Banner, about photo, project screenshots
 
@@ -106,17 +107,17 @@ All extend `base.html`. Use `base_path` variable for relative path resolution (`
 | Workflow | Trigger | What it runs |
 |----------|---------|---------------|
 | `generate_readme.yml` | Issue open/edit, comment, push to main on `main.py`, `workflow_dispatch` | `main.py` → commits BACKUP/*.md |
-| `deploy.yml` | `workflow_dispatch` or `issues.labeled` | `tts_generate.py` → `generate_page.py` → deploy to GitHub Pages |
+| `deploy.yml` | `workflow_dispatch`, `issues.opened`, or `issues.labeled` | `tts_generate.py` → `generate_page.py` → deploy to GitHub Pages |
 | `debug_issue_trigger.yml` | Issue events | Debug logging only |
 
-`generate_readme.yml` only runs if the issue author is the repo owner.
+Both `generate_readme.yml` and `deploy.yml` only run if the issue author is the repo owner (`myogg`).
 
 ## Important Details
 
 - Custom domain: `myogg.hidns.co` (via `CNAME`)
 - TTS service: self-hosted [read-aloud](https://github.com/yy4382/read-aloud) on Vercel at `tts.134688.xyz`, replaces direct Edge TTS calls (which are unreliable with 503 errors)
 - Cloudflare Worker at `cloudflare/worker/` — legacy, provides on-demand TTS via WebSocket (binary audio parsing incomplete, not currently used)
-- Comment system is **Waline** (not Giscus), though Giscus env var infrastructure exists in code
+- Comment system is **Waline** (Giscus code has been fully removed)
 - `generate_safe_name()` creates URL-safe slugs for label names with uniqueness tracking
 - `add_lazy_loading_to_images()` adds `loading="lazy"` to all `<img>` tags in generated HTML
 - Article content tags can be specified via YAML frontmatter `tags:` or a simple `tags: tag1, tag2` line

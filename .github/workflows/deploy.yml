@@ -3,7 +3,7 @@ name: Deploy GitHub Pages
 on:
   workflow_dispatch:   # 手動觸發
   issues:
-    types: [opened, labeled]
+    types: [labeled]
 
 permissions:
   contents: read
