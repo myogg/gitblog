@@ -9,7 +9,7 @@ A GitHub Issues-based static blog system. Blog posts are GitHub Issues in `myogg
 ## Commands
 
 ```bash
-# Install dependencies (PyGithub, feedgen, marko, markdown, jinja2, edge-tts, boto3)
+# Install dependencies (PyGithub, feedgen, marko, markdown, jinja2, boto3)
 pip install -r requirements.txt
 
 # Generate local preview with mock data (no GitHub token needed)
@@ -39,6 +39,8 @@ del github_cache.json
 |----------|---------|---------|
 | `G_TT` | `generate_page.py`, `tts_generate.py`, `main.py` | GitHub personal access token (needs `repo` scope) |
 | `GITHUB_NAME` / `GITHUB_EMAIL` | `generate_page.py` | RSS feed author info |
+| `TTS_API_URL` | `tts_generate.py` | Read-aloud TTS API endpoint (default: `https://tts.134688.xyz/api/synthesis`) |
+| `TTS_API_TOKEN` | `tts_generate.py` | Read-aloud API authentication token |
 | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_PUBLIC_URL` | `tts_generate.py` | Cloudflare R2 storage for TTS audio |
 | `GISCUS_REPO_ID`, `GISCUS_CATEGORY_ID` | `generate_page.py` | Giscus config (currently unused; Waline is active) |
 
@@ -65,7 +67,7 @@ GitHub Issues (content source, labels = categories)
 
 - **`main.py`** — Reads issues, generates categorized `README.md` (the repo landing page), `feed.xml` RSS feed, and `BACKUP/*.md` backups. Ignores labels "Friends" and "TODO". Collapses sections with >5 articles.
 - **`generate_page.py`** — Full static site generator. Fetches issues via GitHub API with 6-hour JSON cache (`github_cache.json`). Parses `<!-- more -->` for summaries, YAML/simple `tags:` for content tags. Builds paginated blog (20/page), article pages with prev/next + related articles, tag pages, search index, sitemap. Uses Jinja2 templates.
-- **`tts_generate.py`** — Edge TTS with `zh-CN-XiaoxiaoNeural` voice (5000 char limit). Uploads to Cloudflare R2 via boto3 or saves locally. Outputs `tts_cache.json`.
+- **`tts_generate.py`** — TTS via read-aloud API (self-hosted at `tts.134688.xyz`) with `zh-CN-XiaoxiaoNeural` voice (5000 char limit). 3x retry with backoff. Uploads to Cloudflare R2 via boto3 or saves locally. Outputs `tts_cache.json`.
 - **`generate_preview.py`** — Local preview with mock data, no API needed.
 
 ### Templates (`templates/`)
@@ -74,7 +76,7 @@ All extend `base.html`. Use `base_path` variable for relative path resolution (`
 
 | Template | Purpose |
 |----------|---------|
-| `base.html` | Master layout: header (banner with logo, description, search, icon links + theme toggle), nav (Home/About), footer |
+| `base.html` | Master layout: header (banner with logo, description, search, icon links + theme toggle), nav (首页/About), footer |
 | `blog.html` | Article listing with title + date cards, pagination (20/page) |
 | `article.html` | Full article: content, prev/next, related, TTS player, Waline comments (`https://waline.134688.xyz`), reading progress bar, medium-zoom |
 | `tag.html` | Tag badge + article list |
@@ -89,7 +91,7 @@ All extend `base.html`. Use `base_path` variable for relative path resolution (`
 
 ### Generated Output (do not manually edit)
 
-- `index.html` — Redirect to `blog.html`
+- `index.html` — First page of blog content (SEO-friendly, not a redirect)
 - `articles/article-{number}.html`
 - `tags/{safe_name}.html`
 - `blog.html`, `blog-page-{N}.html`
@@ -112,7 +114,8 @@ All extend `base.html`. Use `base_path` variable for relative path resolution (`
 ## Important Details
 
 - Custom domain: `myogg.hidns.co` (via `CNAME`)
-- Cloudflare Worker at `cloudflare/worker/` provides on-demand TTS via WebSocket to Edge TTS, stores in R2
+- TTS service: self-hosted [read-aloud](https://github.com/yy4382/read-aloud) on Vercel at `tts.134688.xyz`, replaces direct Edge TTS calls (which are unreliable with 503 errors)
+- Cloudflare Worker at `cloudflare/worker/` — legacy, provides on-demand TTS via WebSocket (binary audio parsing incomplete, not currently used)
 - Comment system is **Waline** (not Giscus), though Giscus env var infrastructure exists in code
 - `generate_safe_name()` creates URL-safe slugs for label names with uniqueness tracking
 - `add_lazy_loading_to_images()` adds `loading="lazy"` to all `<img>` tags in generated HTML

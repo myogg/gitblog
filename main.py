@@ -85,7 +85,8 @@ def format_time(time):
     return str(time)[:10]
 
 def login(token):
-    return Github(token)
+    from github import Auth
+    return Github(auth=Auth.Token(token))
 
 def get_repo(user: Github, repo: str):
     return user.get_repo(repo)

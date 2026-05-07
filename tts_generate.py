@@ -285,9 +285,9 @@ def main():
             return
 
     # 获取 GitHub Issues
-    from github import Github
+    from github import Github, Auth
 
-    g = Github(GITHUB_TOKEN)
+    g = Github(auth=Auth.Token(GITHUB_TOKEN))
     repo = g.get_repo(REPO_NAME)
     all_issues = [i for i in repo.get_issues(state="open") if not i.pull_request]
 

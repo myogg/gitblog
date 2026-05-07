@@ -222,7 +222,8 @@ def login():
     if not GITHUB_TOKEN:
         print("Error: G_TT token not found.")
         exit(1)
-    return Github(GITHUB_TOKEN)
+    from github import Auth
+    return Github(auth=Auth.Token(GITHUB_TOKEN))
 
 def fetch_issues(repo):
     """獲取並緩存 Issues"""
