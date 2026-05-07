@@ -394,7 +394,7 @@ def generate_robots_txt():
     except Exception as e:
         print(f"❌ 生成 robots.txt 失敗: {e}")
 
-def generate_article_page(issue, all_issues, giscus_config=None, label_info=None, audio_map=None):
+def generate_article_page(issue, all_issues, label_info=None, audio_map=None):
     """生成文章页面"""
     try:
         os.makedirs(ARTICLES_DIR, exist_ok=True)
@@ -437,23 +437,6 @@ def generate_article_page(issue, all_issues, giscus_config=None, label_info=None
                 tag_data["safe_name"] = label_info[tag].get('safe_name')
             content_tags_data.append(tag_data)
 
-        # 默认的Giscus配置
-        default_giscus_config = {
-            'repo': 'myogg/Gitblog',
-            'repo_id': os.getenv('GISCUS_REPO_ID', ''),  # 从环境变量获取
-            'category': 'General',
-            'category_id': os.getenv('GISCUS_CATEGORY_ID', ''),
-            'theme': 'light',
-            'lang': 'zh-CN'
-        }
-
-        # 使用传入的配置或默认配置
-        giscus_config = giscus_config or default_giscus_config
-
-        # 检查Giscus配置
-        if not giscus_config.get('repo_id'):
-            print(f"⚠️ 文章 #{issue.number}: Giscus repo_id 未配置，评论系统将不可用")
-
         # 查找上下文和相关文章
         prev_article, next_article = find_prev_next_articles(issue, all_issues)
         related_articles = find_related_articles(issue, all_issues)
@@ -473,7 +456,6 @@ def generate_article_page(issue, all_issues, giscus_config=None, label_info=None
             next_article=next_article,
             related_articles=related_articles,
             YEAR=datetime.now().year,
-            giscus_config=giscus_config,
             base_path="../",
             audio_url=audio_url
         )
@@ -567,23 +549,6 @@ def main():
     # --- 生成搜索索引 ---
     generate_search_index(issues)
 
-    # --- 配置Giscus评论系统 ---
-    giscus_config = {
-        'repo': 'myogg/Gitblog',
-        'repo_id': os.getenv('GISCUS_REPO_ID', ''),
-        'category': 'Announcements',
-        'category_id': os.getenv('GISCUS_CATEGORY_ID', ''),
-        'theme': 'light',
-        'lang': 'zh-CN'
-    }
-
-    # 檢查Giscus配置
-    if not giscus_config['repo_id']:
-        print("⚠️ 注意: Giscus repo_id 未配置，评论系统将不可用")
-        print("  请访问 https://giscus.app 获取配置，并设置环境变量:")
-        print("  GISCUS_REPO_ID=你的repo_id")
-        print("  GISCUS_CATEGORY_ID=你的category_id")
-
     # --- 收集内容标签（在生成文章前） ---
     print("收集內容標籤...")
     content_tags_dict = {}  # {tag_name: [issue1, issue2, ...]}
@@ -612,7 +577,7 @@ def main():
     # --- 生成文章頁面（传入 label_info 和 audio_map） ---
     print("開始生成文章頁面...")
     for issue in issues:
-        generate_article_page(issue, issues, giscus_config, label_info, audio_map)
+        generate_article_page(issue, issues, label_info, audio_map)
 
     # --- 生成标签页面 ---
     print("開始生成標籤頁面...")
