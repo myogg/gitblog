@@ -163,6 +163,16 @@ jobs:
             echo "⚠️ 未生成任何文章"
           fi
 
+      - name: Persist TTS cache
+        run: |
+          if [ -f "tts_cache.json" ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add tts_cache.json
+            git diff --cached --quiet || git commit -m "chore: update tts_cache.json"
+            git push || echo "nothing to push"
+          fi
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
 

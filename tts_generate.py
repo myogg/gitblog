@@ -350,15 +350,12 @@ def main():
     # 加载缓存
     cache = load_cache()
 
-    # R2 模式下，从 R2 重建已有音频的缓存（解决 --issue 模式下缓存不完整的问题）
-    if not local_mode and s3:
+    # R2 模式下，如果缓存为空则从 R2 重建（首次运行或缓存丢失时）
+    if not local_mode and s3 and not cache:
         r2_cache = rebuild_cache_from_r2(s3)
-        # 合并：R2 已有的覆盖本地缓存（R2 是权威来源）
-        for num, url in r2_cache.items():
-            if num not in cache:
-                cache[num] = url
+        cache = r2_cache
         if r2_cache:
-            print(f"✓ 缓存合并后共 {len(cache)} 条音频")
+            print(f"✓ 从 R2 重建缓存: {len(cache)} 条音频")
 
     # 处理每篇文章
     success_count = 0
