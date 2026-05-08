@@ -15,16 +15,17 @@ My personal blog using issues and GitHub Actions
 
 [RSS Feed](https://raw.githubusercontent.com/myogg/gitblog/master/feed.xml)
 
-## 正文 (26篇文章)
+## 正文 (27篇文章)
+- [嘉定三屠：布衣拒外族，热血守衣冠](https://github.com/myogg/gitblog/issues/47)--2026-05-08
 - [明末辽东民间堡寨抗后金](https://github.com/myogg/gitblog/issues/46)--2026-05-07
 - [南宋江淮山寨义民抗金](https://github.com/myogg/gitblog/issues/44)--2026-05-07
 - [坞堡遗民，乱世守土](https://github.com/myogg/gitblog/issues/42)--2026-05-07
 - [诸葛亮临终预言，不杀亡国之臣，早知蜀汉宿](https://github.com/myogg/gitblog/issues/41)--2026-05-05
-- [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)--2026-05-04
 
 <details>
-<summary>显示更多 (21篇)</summary>
+<summary>显示更多 (22篇)</summary>
 
+- [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)
 - [B 站开启纪录片开放周](https://github.com/myogg/gitblog/issues/34)
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)
 - [NVIDIA NIM 上线了 GLM-5.1 等大模型，免费开放 API 使用](https://github.com/myogg/gitblog/issues/30)
