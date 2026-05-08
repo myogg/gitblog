@@ -88,16 +88,17 @@ My personal blog using issues and GitHub Actions
 - [日子就是这样熬的](https://github.com/myogg/gitblog/issues/40)--2026-05-05
 - [美，是异常数据](https://github.com/myogg/gitblog/issues/39)--2026-05-04
 
-## 一些记录 (7篇文章)
+## 一些记录 (8篇文章)
+- [微软TTS 转发器](https://github.com/myogg/gitblog/issues/53)--2026-05-08
 - [PHP 项目淘汰 PHP 许可证](https://github.com/myogg/gitblog/issues/52)--2026-05-08
 - [Steam Controller 外壳CAD开源文件说明](https://github.com/myogg/gitblog/issues/49)--2026-05-08
 - [小米开源 OmniVoice](https://github.com/myogg/gitblog/issues/45)--2026-05-07
 - [Copy Fail 曝光：Linux 本地漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)--2026-05-01
-- [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
 
 <details>
-<summary>显示更多 (2篇)</summary>
+<summary>显示更多 (3篇)</summary>
 
+- [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)
 - [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)
 
