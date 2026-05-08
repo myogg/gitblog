@@ -616,8 +616,6 @@ def main():
     # --- 生成文章頁面（传入 label_info 和 audio_map） ---
     print("開始生成文章頁面...")
     for issue in issues:
-        if args.issue and issue.number != args.issue:
-            continue  # --issue 模式只生成目标文章，其他文章页面保持不变
         generate_article_page(issue, issues, label_info, audio_map)
 
     # --- 生成标签页面 ---
