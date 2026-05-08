@@ -155,6 +155,27 @@ def check_r2_exists(s3, issue_number):
         return False
 
 
+def rebuild_cache_from_r2(s3):
+    """从 R2 扫描已有音频文件，重建缓存（解决 --issue 模式下缓存不完整的问题）"""
+    cache = {}
+    try:
+        prefix = "articles/"
+        paginator = s3.get_paginator("list_objects_v2")
+        for page in paginator.paginate(Bucket=R2_BUCKET, Prefix=prefix):
+            for obj in page.get("Contents", []):
+                key = obj["Key"]
+                # 提取 issue 编号: articles/17.mp3 -> 17
+                filename = key.replace(prefix, "")
+                number = filename.replace(".mp3", "")
+                if number.isdigit():
+                    cache[number] = f"{R2_PUBLIC_URL}/{key}"
+        if cache:
+            print(f"✓ 从 R2 重建缓存: {len(cache)} 条音频")
+    except Exception as e:
+        print(f"⚠️ R2 缓存重建失败: {e}")
+    return cache
+
+
 def upload_to_r2(s3, file_path, issue_number):
     """上传音频文件到 R2"""
     key = f"articles/{issue_number}.mp3"
@@ -326,8 +347,17 @@ def main():
     if not local_mode:
         s3 = get_r2_client()
 
-    # 加载缓存（仓库中持久化，不需要每次重建）
+    # 加载缓存
     cache = load_cache()
+
+    # 从 R2 重建已有音频的缓存（解决 --issue 模式下或缓存缺失时的问题）
+    if not local_mode and s3:
+        r2_cache = rebuild_cache_from_r2(s3)
+        for num, url in r2_cache.items():
+            if num not in cache:
+                cache[num] = url
+        if r2_cache:
+            print(f"✓ 缓存合并后共 {len(cache)} 条音频")
 
     # 处理每篇文章
     success_count = 0
