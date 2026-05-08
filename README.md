@@ -65,16 +65,17 @@ My personal blog using issues and GitHub Actions
 - [cloudflare 提供安全的私有网络——隆重推出 Cloudflare Mesh](https://github.com/myogg/gitblog/issues/17)--2026-04-16
 - [侠影](https://github.com/myogg/gitblog/issues/2)--2026-04-15
 
-## blog (10篇文章)
+## blog (11篇文章)
+- [当代码跑得比云还快](https://github.com/myogg/gitblog/issues/50)--2026-05-08
 - [微软TTS的音色和合成质量不错](https://github.com/myogg/gitblog/issues/43)--2026-05-07
 - [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)--2026-05-04
 - [五一三天假](https://github.com/myogg/gitblog/issues/37)--2026-05-03
 - [永远不要为不能改变的事情难过](https://github.com/myogg/gitblog/issues/36)--2026-05-01
-- [童年与成长回忆—致七零后](https://github.com/myogg/gitblog/issues/33)--2026-04-28
 
 <details>
-<summary>显示更多 (5篇)</summary>
+<summary>显示更多 (6篇)</summary>
 
+- [童年与成长回忆—致七零后](https://github.com/myogg/gitblog/issues/33)
 - [我头回过桥](https://github.com/myogg/gitblog/issues/32)
 - [这小视频是不能看，看一场哭一场！](https://github.com/myogg/gitblog/issues/16)
 - [忘天忘地忘不了你](https://github.com/myogg/gitblog/issues/3)
@@ -87,10 +88,17 @@ My personal blog using issues and GitHub Actions
 - [日子就是这样熬的](https://github.com/myogg/gitblog/issues/40)--2026-05-05
 - [美，是异常数据](https://github.com/myogg/gitblog/issues/39)--2026-05-04
 
-## 一些记录 (5篇文章)
+## 一些记录 (6篇文章)
+- [Steam Controller 外壳CAD开源文件说明](https://github.com/myogg/gitblog/issues/49)--2026-05-08
 - [小米开源 OmniVoice](https://github.com/myogg/gitblog/issues/45)--2026-05-07
 - [Copy Fail 曝光：Linux 本地漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)--2026-05-01
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)--2026-04-19
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)--2026-04-17
-- [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)--2026-04-17
+
+<details>
+<summary>显示更多 (1篇)</summary>
+
+- [2026 全球宽带价格报告，中国排名第16](https://github.com/myogg/gitblog/issues/24)
+
+</details>
 
