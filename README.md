@@ -66,7 +66,7 @@ My personal blog using issues and GitHub Actions
 - [侠影](https://github.com/myogg/gitblog/issues/2)--2026-04-15
 
 ## blog (11篇文章)
-- [当代码跑得比云还快](https://github.com/myogg/gitblog/issues/50)--2026-05-08
+- [快了有问题](https://github.com/myogg/gitblog/issues/51)--2026-05-08
 - [微软TTS的音色和合成质量不错](https://github.com/myogg/gitblog/issues/43)--2026-05-07
 - [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)--2026-05-04
 - [五一三天假](https://github.com/myogg/gitblog/issues/37)--2026-05-03
