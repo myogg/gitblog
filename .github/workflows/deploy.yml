@@ -93,6 +93,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install markdown PyGithub marko jinja2 feedgen boto3
 
+      - name: Wait for GitHub API sync
+        run: sleep 15
+
       - name: Generate TTS audio
         env:
           G_TT: ${{ secrets.G_TT }}
@@ -105,7 +108,11 @@ jobs:
           R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
         run: |
           echo "🎙️ 开始生成 TTS 音频..."
-          python tts_generate.py
+          if [[ "${{ github.event_name }}" == "issues" ]]; then
+            python tts_generate.py --issue ${{ github.event.issue.number }}
+          else
+            python tts_generate.py
+          fi
           # 即使 TTS 部分失败也会生成 tts_cache.json（包含已有缓存），
           # 所以不中断构建，但缺失的文章将没有播放器
 

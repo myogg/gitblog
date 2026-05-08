@@ -289,15 +289,34 @@ def main():
 
     g = Github(auth=Auth.Token(GITHUB_TOKEN))
     repo = g.get_repo(REPO_NAME)
-    all_issues = [i for i in repo.get_issues(state="open") if not i.pull_request]
 
-    # 过滤指定 issue
     if target_issue:
-        issues = [i for i in all_issues if i.number == target_issue]
+        # 精确获取单个 issue，带重试（避免 API eventual consistency 问题）
+        issues = []
+        for attempt in range(5):
+            try:
+                print(f"📥 获取 Issue #{target_issue} (第 {attempt + 1} 次尝试)")
+                issue = repo.get_issue(target_issue)
+                if issue and not issue.pull_request:
+                    issues = [issue]
+                    print(f"✅ 获取成功: #{issue.number} {issue.title[:40]}")
+                    break
+                else:
+                    print(f"⚠️ Issue #{target_issue} 是 PR，跳过")
+                    break
+            except Exception as e:
+                print(f"⚠️ 第 {attempt + 1} 次获取失败: {e}")
+                if attempt < 4:
+                    print(f"🔄 等待 3s 后重试...")
+                    time.sleep(3)
+                else:
+                    raise Exception(f"无法获取 Issue #{target_issue}")
+
         if not issues:
             print(f"❌ 未找到 issue #{target_issue}")
             return
     else:
+        all_issues = [i for i in repo.get_issues(state="open") if not i.pull_request]
         issues = all_issues
 
     print(f"找到 {len(issues)} 个 issues")
