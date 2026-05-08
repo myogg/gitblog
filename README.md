@@ -53,12 +53,19 @@ My personal blog using issues and GitHub Actions
 ## 世界好精彩我想去转转 (1篇文章)
 - [竹筍的超級潛力：它為何是營養界的黑馬？](https://github.com/myogg/gitblog/issues/15)--2026-04-16
 
-## 碎碎念 (5篇文章)
+## 碎碎念 (6篇文章)
+- [Telegram 重大更新——新增10项重要功能](https://github.com/myogg/gitblog/issues/54)--2026-05-08
 - [两种读书，两种人间](https://github.com/myogg/gitblog/issues/48)--2026-05-08
 - [NVIDIA NIM 上线了 GLM-5.1 等大模型，免费开放 API 使用](https://github.com/myogg/gitblog/issues/30)--2026-04-19
 - [一杯烈酒入喉](https://github.com/myogg/gitblog/issues/23)--2026-04-17
 - [Telegram官方已集成中文语言选项](https://github.com/myogg/gitblog/issues/20)--2026-04-17
-- [这小视频是不能看，看一场哭一场！](https://github.com/myogg/gitblog/issues/16)--2026-04-16
+
+<details>
+<summary>显示更多 (1篇)</summary>
+
+- [这小视频是不能看，看一场哭一场！](https://github.com/myogg/gitblog/issues/16)
+
+</details>
 
 ## 2026 (3篇文章)
 - [Copy Fail 曝光：Linux 本地漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)--2026-05-01
