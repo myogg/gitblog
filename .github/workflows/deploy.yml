@@ -122,7 +122,11 @@ jobs:
           # ▲▲▲ ▲▲▲ ▲▲▲
         run: |
           echo "開始生成HTML頁面..."
-          python generate_page.py
+          if [[ "${{ github.event_name }}" == "issues" ]]; then
+            python generate_page.py --issue ${{ github.event.issue.number }}
+          else
+            python generate_page.py
+          fi
           
           echo "=== 文件生成檢查 ==="
           echo "當前目錄文件:"

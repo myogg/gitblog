@@ -1,6 +1,8 @@
+import argparse
 import os
 import re
 import json
+import time
 import markdown
 import shutil
 from github import Github
@@ -225,8 +227,28 @@ def login():
     from github import Auth
     return Github(auth=Auth.Token(GITHUB_TOKEN))
 
-def fetch_issues(repo):
-    """獲取並緩存 Issues"""
+def fetch_issues(repo, target_issue=None):
+    """獲取並緩存 Issues，支持精確獲取指定 issue"""
+    # 如果指定了 issue，先用 get_issue() 精確獲取（帶重試）
+    specific_issue = None
+    if target_issue:
+        for attempt in range(5):
+            try:
+                print(f"📥 精確獲取 Issue #{target_issue} (第 {attempt + 1} 次嘗試)")
+                issue = repo.get_issue(target_issue)
+                if issue and not issue.pull_request:
+                    specific_issue = issue
+                    print(f"✅ 獲取成功: #{issue.number} {issue.title[:40]}")
+                    break
+                else:
+                    print(f"⚠️ Issue #{target_issue} 是 PR，跳過")
+                    break
+            except Exception as e:
+                print(f"⚠️ 第 {attempt + 1} 次獲取失敗: {e}")
+                if attempt < 4:
+                    print(f"🔄 等待 3s 後重試...")
+                    time.sleep(3)
+
     # 檢查緩存
     if os.path.exists(CACHE_FILE):
         try:
@@ -250,12 +272,25 @@ def fetch_issues(repo):
                             })() for l in item['labels']]
                         })()
                         issues.append(issue)
+                    # 確保指定的 issue 在緩存列表中
+                    if specific_issue:
+                        issue_numbers = {i.number for i in issues}
+                        if specific_issue.number not in issue_numbers:
+                            print(f"✅ 將 Issue #{specific_issue.number} 補充到緩存列表中")
+                            issues.append(specific_issue)
                     return issues
         except Exception as e:
             print(f"緩存讀取失敗: {e}")
 
     print("從GitHub獲取最新數據...")
     all_issues = [i for i in repo.get_issues(state="open") if not i.pull_request]
+
+    # 確保指定的 issue 在列表中（解決 API eventual consistency 問題）
+    if specific_issue:
+        issue_numbers = {i.number for i in all_issues}
+        if specific_issue.number not in issue_numbers:
+            print(f"✅ 將 Issue #{specific_issue.number} 補充到列表中（API 列表查詢未返回）")
+            all_issues.append(specific_issue)
 
     # 保存緩存
     cache_data = {
@@ -471,6 +506,10 @@ def generate_article_page(issue, all_issues, label_info=None, audio_map=None):
         print(f"❌ 生成文章 #{issue.number} 失败: {e}")
 
 def main():
+    parser = argparse.ArgumentParser(description="GitBlog 靜態頁面生成器")
+    parser.add_argument("--issue", type=int, help="只處理指定 issue 編號")
+    args = parser.parse_args()
+
     print("開始生成GitBlog頁面...")
     print(f"倉庫: {REPO_NAME}")
 
@@ -487,7 +526,7 @@ def main():
 
     g = login()
     repo = g.get_repo(REPO_NAME)
-    issues = fetch_issues(repo)
+    issues = fetch_issues(repo, target_issue=args.issue)
 
     if not issues:
         print("❌ 未找到任何issues")
