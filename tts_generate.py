@@ -351,6 +351,7 @@ def main():
     cache = load_cache()
 
     # 从 R2 重建已有音频的缓存（解决 --issue 模式下或缓存缺失时的问题）
+    r2_cache = {}
     if not local_mode and s3:
         r2_cache = rebuild_cache_from_r2(s3)
         for num, url in r2_cache.items():
@@ -358,6 +359,7 @@ def main():
                 cache[num] = url
         if r2_cache:
             print(f"✓ 缓存合并后共 {len(cache)} 条音频")
+    r2_rebuild_ok = bool(r2_cache)  # list 成功时有内容，可用作 skip 依据
 
     # 处理每篇文章
     success_count = 0
@@ -378,15 +380,22 @@ def main():
                     skip_count += 1
                     continue
             else:
-                try:
-                    if check_r2_exists(s3, num):
-                        url = f"{R2_PUBLIC_URL}/articles/{num}.mp3"
-                        cache[num] = url
+                # R2 list 成功后直接用 r2_cache 判断，跳过逐篇 head_object
+                if r2_rebuild_ok:
+                    if num in r2_cache:
                         print(f"  ⏭️ R2 已存在，跳过")
                         skip_count += 1
                         continue
-                except Exception as e:
-                    print(f"  ⚠️ R2 检查失败: {e}，继续生成")
+                else:
+                    try:
+                        if check_r2_exists(s3, num):
+                            url = f"{R2_PUBLIC_URL}/articles/{num}.mp3"
+                            cache[num] = url
+                            print(f"  ⏭️ R2 已存在，跳过")
+                            skip_count += 1
+                            continue
+                    except Exception as e:
+                        print(f"  ⚠️ R2 检查失败: {e}，继续生成")
 
         # 清洗文本
         text = clean_text_for_tts(issue.body)
