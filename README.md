@@ -73,16 +73,17 @@ My personal blog using issues and GitHub Actions
 - [cloudflare 提供安全的私有网络——隆重推出 Cloudflare Mesh](https://github.com/myogg/gitblog/issues/17)--2026-04-16
 - [侠影](https://github.com/myogg/gitblog/issues/2)--2026-04-15
 
-## blog (11篇文章)
+## blog (12篇文章)
+- [卜算子·自题](https://github.com/myogg/gitblog/issues/59)--2026-05-10
 - [快了有问题](https://github.com/myogg/gitblog/issues/51)--2026-05-08
 - [微软TTS的音色和合成质量不错](https://github.com/myogg/gitblog/issues/43)--2026-05-07
 - [眼见为实，AI一来，什么都分不清了](https://github.com/myogg/gitblog/issues/38)--2026-05-04
 - [五一三天假](https://github.com/myogg/gitblog/issues/37)--2026-05-03
-- [永远不要为不能改变的事情难过](https://github.com/myogg/gitblog/issues/36)--2026-05-01
 
 <details>
-<summary>显示更多 (6篇)</summary>
+<summary>显示更多 (7篇)</summary>
 
+- [永远不要为不能改变的事情难过](https://github.com/myogg/gitblog/issues/36)
 - [童年与成长回忆—致七零后](https://github.com/myogg/gitblog/issues/33)
 - [我头回过桥](https://github.com/myogg/gitblog/issues/32)
 - [这小视频是不能看，看一场哭一场！](https://github.com/myogg/gitblog/issues/16)
