@@ -113,6 +113,7 @@ My personal blog using issues and GitHub Actions
 
 </details>
 
-## 一些思考 (1篇文章)
+## 一些思考 (2篇文章)
+- [从利益的角度去思考每一个人的行为和动作，你会有不一样的答案](https://github.com/myogg/gitblog/issues/57)--2026-05-10
 - [文徵明：以勤补拙，笔墨留芳](https://github.com/myogg/gitblog/issues/55)--2026-05-08
 
