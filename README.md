@@ -96,16 +96,17 @@ My personal blog using issues and GitHub Actions
 - [日子就是这样熬的](https://github.com/myogg/gitblog/issues/40)--2026-05-05
 - [美，是异常数据](https://github.com/myogg/gitblog/issues/39)--2026-05-04
 
-## 一些记录 (9篇文章)
+## 一些记录 (10篇文章)
+- [Grok Build 编程工具泄露](https://github.com/myogg/gitblog/issues/58)--2026-05-10
 - [Android 和 iOS 版 Telegram 已更新至 12.7 版本](https://github.com/myogg/gitblog/issues/56)--2026-05-09
 - [微软TTS 转发器](https://github.com/myogg/gitblog/issues/53)--2026-05-08
 - [PHP 项目淘汰 PHP 许可证](https://github.com/myogg/gitblog/issues/52)--2026-05-08
 - [Steam Controller 外壳CAD开源文件说明](https://github.com/myogg/gitblog/issues/49)--2026-05-08
-- [小米开源 OmniVoice](https://github.com/myogg/gitblog/issues/45)--2026-05-07
 
 <details>
-<summary>显示更多 (4篇)</summary>
+<summary>显示更多 (5篇)</summary>
 
+- [小米开源 OmniVoice](https://github.com/myogg/gitblog/issues/45)
 - [Copy Fail 曝光：Linux 本地漏洞可写入页缓存](https://github.com/myogg/gitblog/issues/35)
 - [科學實證的12個抗發炎祕訣](https://github.com/myogg/gitblog/issues/31)
 - [AI 圈发布一系列重磅世界模型](https://github.com/myogg/gitblog/issues/29)
