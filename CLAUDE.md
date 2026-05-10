@@ -2,168 +2,90 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Repository Overview
+## Project Overview
 
-This repository contains the Gitblog project:
+GitHub Issues-based static blog system. Blog posts are GitHub Issues in `myogg/gitblog`, labels serve as categories. Python scripts generate a static HTML site deployed to GitHub Pages.
 
-- **Gitblog** - A GitHub Issues-based blog system that generates static pages from GitHub Issues
+## Key Files
 
-## Gitblog Project
+- `main.py` — Generates README.md and backs up issues to `BACKUP/` directory
+- `generate_page.py` — Generates HTML pages, search index, sitemap, and tag pages from real GitHub Issues
+- `tts_generate.py` — Generates TTS audio for articles via read-aloud API (optional, R2 or local mode)
+- `requirements.txt` — Python dependencies (PyGithub, feedgen, marko, markdown, jinja2, boto3)
+- `.github/workflows/deploy.yml` — GitHub Pages deployment (manual or on issue labeled)
+- `.github/workflows/generate_readme.yml` — README update on issue events
 
-Gitblog is a Python-based static site generator that uses GitHub Issues as a content management system. It automatically generates README files, HTML pages, and deploys to GitHub Pages via GitHub Actions.
+## Architecture
 
-### Key Files
+1. **Content**: GitHub Issues as blog posts, labels as tags/categories
+2. **Processing**: `main.py` updates README on issue events; `generate_page.py` builds full static site
+3. **Templating**: Jinja2 templates in `templates/`:
+   - `base.html` — Main layout (custom Puma theme, no Tailwind)
+   - `article.html` — Article page with reading progress, related articles, Waline comments, TTS player
+   - `blog.html` — Homepage article list with pagination
+   - `tag.html`, `search.html`, `about.html`
+4. **Styling**: Custom CSS in `static/style.css` with dark mode support, local Inter font via `static/fonts.css`, Noto Sans SC from Google Fonts
+5. **Caching**: 6-hour GitHub API cache (`github_cache.json`); static files use `?v=1` cache busting
+6. **Search**: Client-side JS with `static/search-index.json`
+7. **SEO**: Auto-generates `sitemap.xml` and `robots.txt`
+8. **Comments**: Waline comment system (server at waline.134688.xyz)
 
-- `main.py` - Generates README.md and backs up issues to BACKUP/ directory
-- `generate_page.py` - Generates HTML pages, search index, sitemap, and tag pages from real GitHub Issues
-- `generate_preview.py` - Creates local preview pages with mock data (doesn't require GitHub API)
-- `requirements.txt` - Python dependencies (PyGithub, feedgen, marko, markdown, jinja2)
-- `.github/workflows/` - GitHub Actions workflows for automation
-
-### Architecture
-
-1. **Content Storage**: GitHub Issues act as blog posts with labels for categorization
-2. **Content Processing**:
-   - `main.py` runs on issue events to update README.md and create markdown backups
-   - `generate_page.py` fetches issues via GitHub API, converts markdown to HTML, and generates full static site
-3. **Templating**: Jinja2 templates in `templates/` directory:
-   - `base.html` - Main layout template (uses Tailwind CSS via CDN)
-   - `article.html` - Individual article template
-   - `tag.html` - Tag listing template
-   - `search.html` - Search page template
-   - `about.html` - About page template
-4. **Deployment**: GitHub Actions workflows deploy to GitHub Pages when triggered by issue labels or manually
-5. **Caching**: `generate_page.py` implements a 6-hour cache (`github_cache.json`) to reduce API calls
-6. **Search**: Generates `static/search-index.json` for client-side search functionality
-7. **SEO**: Automatically generates `sitemap.xml` and `robots.txt`
-
-### Common Development Tasks
-
-#### Local Development Setup
+## Common Commands
 
 ```bash
-# Navigate to Gitblog directory
-cd Gitblog
-
-# Set up Python virtual environment (recommended)
-python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-# Install Python dependencies
+# Install dependencies
 pip install -r requirements.txt
-```
 
-#### Generating Local Preview (Mock Data)
+# Set GitHub token (required for real data)
+# Windows: set G_TT=your_token
+# PowerShell: $env:G_TT="your_token"
+# Linux/Mac: export G_TT=your_token
 
-```bash
-# Generate preview with mock data (no GitHub API needed)
-python generate_preview.py
-# Opens start_preview.bat script for local server
-# Or manually run: python -m http.server 8000
-# Then open http://localhost:8000 in browser
-```
-
-#### Generating Pages with Real GitHub Data
-
-```bash
-# Set GitHub token as environment variable
-# Windows (Command Prompt):
-set G_TT=your_github_token
-# Windows (PowerShell):
-$env:G_TT="your_github_token"
-# macOS/Linux:
-export G_TT=your_github_token
-
-# Generate full static site with real issues
+# Generate full static site
 python generate_page.py
-```
 
-#### Environment Variables for Full Functionality
+# Process a single issue only
+python generate_page.py --issue 17
 
-- `G_TT`: GitHub personal access token (required for GitHub API access)
-- `GISCUS_REPO_ID`: Giscus commenting system repository ID (optional)
-- `GISCUS_CATEGORY_ID`: Giscus category ID (optional)
+# Generate TTS audio (optional)
+python tts_generate.py --local          # local files in static/tts/
+python tts_generate.py --issue 30       # single article
+python tts_generate.py                  # R2 mode (requires env vars)
 
-#### Cache Management
+# Generate README and backup
+python main.py <github_token> <repo_name> [--issue_number NUMBER]
 
-```bash
-# Clear the GitHub API cache (if issues aren't updating)
+# Local preview (after generating static site)
+python -m http.server 8000
+
+# Clear API cache
 rm github_cache.json
-# or on Windows:
-del github_cache.json
 ```
 
-#### Testing Generated Output
+## Environment Variables
 
-```bash
-# Check generated files
-ls -la articles/       # Generated article HTML files
-ls -la tags/           # Tag pages
-ls -la static/         # CSS, JS, search index
-```
+- `G_TT` — GitHub personal access token (required for GitHub API)
+- `GISCUS_REPO_ID`, `GISCUS_CATEGORY_ID` — Giscus commenting (optional, unused currently)
+- `TTS_API_URL`, `TTS_API_TOKEN` — TTS API endpoint (optional)
+- `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_PUBLIC_URL` — R2 storage for TTS (optional)
 
-### GitHub Actions Workflows
+## Workflows
 
-- `generate_readme.yml`: Runs on issue creation/editing to update README.md and create backups
-  - Trigger: `issues` (opened, edited), `issue_comment` (created, edited), `push` to main
-  - Uses `main.py` with GitHub token secret `G_T`
-  - Commits backup markdown files to repository
+**generate_readme.yml**: Triggered by issue opened/edited, issue comment, or push to main modifying `main.py`. Runs `main.py` to update README.md and commits issue backups to `BACKUP/`.
 
-- `deploy.yml`: Manual or label-triggered deployment to GitHub Pages
-  - Trigger: `workflow_dispatch` (manual) or `issues.labeled`
-  - Uses `generate_page.py` with secrets `G_TT`, `GISCUS_REPO_ID`, `GISCUS_CATEGORY_ID`
-  - Deploys generated static site to GitHub Pages
+**deploy.yml**: Triggered manually or when an issue is labeled (by repo owner). Runs `tts_generate.py` then `generate_page.py`, commits TTS cache, deploys to GitHub Pages.
 
-### Important Notes
+## Important Notes
 
-- The `index.html` file in the Gitblog directory is generated by scripts and should not be manually edited
-- Real content comes from GitHub Issues; local preview uses mock data in `generate_preview.py`
-- Backups of issues are stored as markdown files in `BACKUP/` directory
-- Static assets (CSS, JS) are in `static/` directory
-- Generated articles are placed in `articles/` directory
-- Tag pages are generated in `tags/` directory
-- The site uses Tailwind CSS via CDN (no local build process)
-- Search functionality uses client-side JavaScript with `static/search-index.json`
-- Giscus commenting system requires repository ID and category ID environment variables
-
-
-## Repository Structure
-
-```
-.
-├── Gitblog/                    # GitHub Issues-based blog system
-│   ├── .github/workflows/      # GitHub Actions workflows
-│   ├── BACKUP/                 # Markdown backups of GitHub Issues
-│   ├── templates/              # Jinja2 HTML templates
-│   ├── static/                 # CSS, JS assets
-│   ├── main.py                 # README and backup generator
-│   ├── generate_page.py        # Full static site generator
-│   ├── generate_preview.py     # Local preview generator
-│   └── requirements.txt        # Python dependencies
-```
-
-## Workflow Summary
-
-1. **Content Creation**: Create/edit GitHub Issues in the repository
-2. **Automated Processing**: GitHub Actions run `main.py` to update README and create backups
-3. **Deployment**: Trigger deployment workflow to generate static pages and deploy to GitHub Pages
-4. **Local Testing**: Use `generate_preview.py` for mock data or `generate_page.py` with GitHub token for real data testing
+- `index.html` is generated by `generate_page.py`, never edit manually
+- Real content comes from GitHub Issues at `myogg/gitblog`
+- Static assets in `static/` are served as-is from the repo root on GitHub Pages
+- Cache busting uses `?v=1` query param — increment when deploying CSS/JS changes
+- Article summaries use `<!-- more -->` separator in issue body (optional)
+- TTS audio URLs are stored in `tts_cache.json`, loaded by `generate_page.py`
 
 ## Troubleshooting
 
-### Gitblog Issues Not Updating
-- Check `github_cache.json` - delete if stale (6-hour cache)
-- Verify `G_TT` environment variable is set correctly
-- Check GitHub token permissions (needs `repo` scope)
-
-### Missing CSS/JS in Generated Pages
-- Ensure `static/` directory exists with `style.css`
-- Check template references to `static/` path
-
-### Giscus Comments Not Showing
-- Verify `GISCUS_REPO_ID` and `GISCUS_CATEGORY_ID` environment variables are set
-- Check giscus.app configuration matches repository
-
+- **Issues not updating**: Delete `github_cache.json` (6-hour cache)
+- **Giscus not showing**: Check giscus.app config matches repo; `GISCUS_REPO_ID` and `GISCUS_CATEGORY_ID` must match giscus dashboard
+- **TTS failing**: Run `python tts_generate.py --local` to bypass R2; check TTS API connectivity
