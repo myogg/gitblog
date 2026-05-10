@@ -3,7 +3,7 @@
 /* Inter & JetBrains Mono: 本地加载 (fonts.css) */
 /* Noto Sans SC: 保留 Google Fonts CDN (中文字体过大，按需加载) */
 @import url('fonts.css');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
 
 :root {
     --puma-main-color: #27ae60;
