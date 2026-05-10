@@ -528,6 +528,7 @@ body[data-theme="dark"] .moon-icon {
 @media screen and (max-width: 768px) {
     .article-card-title {
         font-size: 20px;
+        font-weight: 700;
         margin-bottom: 16px;
     }
 }
